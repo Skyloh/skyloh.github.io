@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, li {
+.dark h1, .dark h2, .dark li {
     color:gainsboro;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1, h2, li {
+    color:#464646;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -32,10 +37,18 @@ h1, li {
     min-height: 100vh;
 }
 
-.centered-box-content {
-    background-color: #464646;
+.centered-box-content{
+    background-color:rgb(236, 236, 236);
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 25rem;
+    box-shadow: 0 15px 6px rgb(133, 133, 133);
+    width: 35rem;
+}
+
+.dark .centered-box-content {
+    background-color:#464646;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 15px 6px rgba(29, 29, 29, 0.76);
+    width: 35rem;
 }
