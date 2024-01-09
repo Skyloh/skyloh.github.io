@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    color:slategray
+h1, li {
+    color:gainsboro;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.dark {
+    background-color: #2f3030;
+    color:ghostwhite;
+}
+
+.match {
+    width:15rem;
+    height:15rem;
+}
+
+.slight-round {
+    border-radius: 15px;
+}
+
+.centered-panel {
+    min-height: 100vh;
+}
+
+.centered-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.centered-box-content {
+    background-color: #464646;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 25rem;
 }
