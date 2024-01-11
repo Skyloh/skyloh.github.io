@@ -61,21 +61,21 @@
         <div class="flex flex-col items-center justify-center">
             <h3>What are you <i>mainly</i> here to see?</h3>
             <div class="flex flex-row items-center justify-center" style="gap:15px">
-                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" type="CS">Computer
-                    Science</button>
-                <h3> | </h3>
-                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game
-                    Development</button>
+                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game Development</button>
+                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" type="CS">Computer Science</button>
+
+                <!-- Until there exists other stuff, comment this out.
                 <h3> | </h3>
                 <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="O">Tab 3</button>
+                -->
             </div>
         </div>
 
         <!-- Tab Content -->
         <div id="tab-1" class="tab-content active">
             <!-- Box Entries -->
-            <div id="GD 1" class="entry centered-box-container">
-                <div class="fade pop-element centered-box-content flex flex-col items-center">
+            <div id="GD 1" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
 
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
@@ -113,24 +113,51 @@
 
 
 
-            <div id="GD 2" class="entry centered-box-container">
-                <div class="centered-box-content">
-                    <div class="flex flex-row items-center">
-                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 2</h1>
-                        <h2 class="mb-4">date range - end</h2>
+            <div id="GD 2" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+                    
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/Skyloh/Project-Dalle"><u>Project Dall-E</u></a>
+                        </h1>
+                        <h2 class="mb-4">March 2023 - April 2023</h2>
                     </div>
-                    <div class="flex flex-row items-center">
-                        <img src="assets/sched.png" alt="Image 2" class="slight-round match mb-4 mr-auto">
-                        <ul class="flex flex-col items">
-                            <li class="mb-2"> > Bullet Point 1</li>
-                            <li class="mb-2"> > Bullet Point 2</li>
-                            <li class="mb-2"> > Bullet Point 3</li>
-                        </ul>
+
+                    <div class="flex flex-row items-center justify-center">
+
+                        <!-- Add video here. 
+                        <video class="mr-5 slight-round" controls>
+                            <source src="assets/projectbeat/scrubdemo.mp4" type="video/mp4">
+                        </video>
+                        -->
+
+                        <!-- for now, temp image-->
+                        <img src="/assets/projectdalle/entrance.png" alt="entrance" width="66%" class="pop-element mx-2">
+
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting" style="object-fit: cover;" class="pop-element">
+                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc" style="object-fit: cover;" class="pop-element">
+                        </div>
                     </div>
+
+                    <p style="font-size: medium;" class="mt-2">
+                        What is this thing? Here is where I'll explain it. Like, why I did it, what I was trying to
+                        accomplish, that sorta stuff.
+                    </p>
+
+                    <h1 class="mt-4 font-bold">- Features -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Here is where I talk about the things and the stuff.</li>
+                        <li class="mb-2"> > Great, isn't it? Love unity.</li>
+                        <li class="mb-2"> > technical skills, algorithms, data structures, describe gameplay.</li>
+                    </ul>
+
                 </div>
             </div>
 
-            <div id="CS 2" class="entry centered-box-container">
+            <div id="CS 2" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content">
                     <div class="flex flex-row items-center">
                         <h1 class="text-3xl font-bold mb-4 mr-auto">Box 3</h1>

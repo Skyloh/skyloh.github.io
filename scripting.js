@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // contents.forEach(c => c.classList.remove('active'));
             // button.classList.add('active');
             button.classList.add('font-bold');
-            
+
             // sorting
-            const entries = document.querySelectorAll('entry')
+            const entries = Array.from(document.querySelectorAll('div.entry'));
 
             const buttonType = button.getAttribute('type');
 
@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     const aInt = parseInt(aID.charAt(aID.length - 1), 10);
                     const bInt = parseInt(aID.charAt(aID.length - 1), 10);
 
-                    return aInt - bInt;
+                    return bInt - aInt;
                 } else if (aHasType) {
-                    return 1;
-                } else {
                     return -1;
+                } else {
+                    return 1;
                 }
             });
 
-            const container = document.getElementByClassName('tab-content');
+            const container = document.getElementById('tab-1');
 
             entries.forEach((item) => {
                 container.appendChild(item);
@@ -54,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('dark');
     });
 });
-
