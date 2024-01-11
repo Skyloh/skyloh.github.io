@@ -583,6 +583,11 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -597,6 +602,10 @@ video {
 
 .mr-auto {
   margin-right: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -628,13 +637,28 @@ video {
   line-height: 2.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.dark h1, .dark h2, .dark li {
-  color:gainsboro;
-  font-family:'Courier New', Courier, monospace;
+.dark {
+  background-color: #2f3030;
+  color:ghostwhite;
 }
 
 h1, h2, li {
@@ -642,9 +666,21 @@ h1, h2, li {
   font-family:'Courier New', Courier, monospace;
 }
 
-.dark {
-  background-color: #2f3030;
-  color:ghostwhite;
+.dark h1, .dark h2, .dark li {
+  color:gainsboro;
+  font-family:'Courier New', Courier, monospace;
+}
+
+h3, a {
+  font-size: small;
+  color:#464646;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.dark h3, .dark a {
+  font-size: small;
+  color:gainsboro;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .match {
@@ -664,7 +700,8 @@ h1, h2, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 65vh;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .centered-box-content{
@@ -684,27 +721,51 @@ h1, h2, li {
 }
 
 .header-box {
-  background-color:rgb(247, 247, 247);
-  padding: 2rem;
+  background-color:rgb(228, 228, 228);
+  padding: 1.5rem;
   border-radius: 0.5rem;
   width: 45rem;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
 }
 
 .dark .header-box {
   background-color:#5f5f5f;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   width: 45rem;
 }
 
-h3 {
-  font-size: small;
-  color:#464646;
-  font-family:'Courier New', Courier, monospace;
+.border-box {
+  border-width: 0.5vh;
+  border-color: rgb(74, 223, 173);
+  border-style: outset;
 }
 
-.dark h3 {
-  font-size: small;
-  color:gainsboro;
-  font-family:'Courier New', Courier, monospace;
+.dark .border-box {
+  border-width: 0.5vh;
+  border-color: #FFBF00;
+  border-style: outset;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.dark .darkmode-toggle {
+  filter:invert(1);
+}
+
+.hover\:text-teal-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(20 184 166 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:text-amber-500:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(245 158 11 / var(--tw-text-opacity));
 }

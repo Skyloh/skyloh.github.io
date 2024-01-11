@@ -10,49 +10,110 @@
 <body class="dark">
     <!-- Main Container -->
     <div class="container mx-auto">
+
+        <div class="flex flex-row items-center justify-center">
+            <button id="modeToggle" class="my-2">
+                <img src="/assets/sun.png" alt="DarkMode" width="45" class="darkmode-toggle">
+            </button>
+        </div>
+
+        <!-- Header -->
         <div class="flex items-center justify-center" style="min-height: 25vh;">
-            <div class="header-box">
-                <h1 class="pb-4 text-3xl">Nathan Gooneratne</h1>
-                <h3>Computer Science and Game Development @ Northeastern University</h3>
+
+            <div class="flex flex-row header-box">
+                <div class="flex flex-col items-center justify-center mr-5">
+                    <img src="assets/profile.png" alt="Me" width="125" class="slight-round border-box">
+                </div>
+
+                <div>
+                    <h1 class="text-3xl">Nathan Gooneratne</h1>
+                    <h3 class="pb-4 text-xs">Computer Science and Game Development @ Northeastern University</h3>
+
+                    <div class="flex flex-row items-center" style="gap: 10px;">
+                        <div class="flex flex-col items-center justify-center">
+                            <h3><b>gooneratne.n@northeastern.edu</b></h3>
+                            <h3>nathan.gooneratne@gmail.com</h3>
+                        </div>
+                        <h3> | </h3>
+                        <div class="flex flex-row items-center">
+                            <img src="assets/discord.PNG" alt="Discord" width="25">
+                            <h3>@liemon</h3>
+                        </div>
+                        <h3> | </h3>
+                        <h3>610-348-4303</h3>
+                    </div>
+
+                    <div class="flex flex-row items-center mt-4">
+                        <a href="https://github.com/Skyloh"> <u>github</u> </a>
+                        <h3> | </h3>
+                        <a href="https://skyloh.itch.io/"> <u>itch.io</u> </a>
+                        <h3> | </h3>
+                        <a href="assets/profile.PNG" download> <u>resume</u> </a>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Tab Buttons -->
+        <div class="flex flex-row items-center justify-center" style="gap:15px">
+            <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-1">Computer
+                Science</button>
+            <h3> | </h3>
+            <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-2">Game
+                Development</button>
+            <h3> | </h3>
+            <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-3">Tab 3</button>
+        </div>
 
-        <div class="centered-box-container">
-            <div class="centered-box-content">
-                <div class="flex flex-row items-center">
-                    <h1 class="text-3xl font-bold mb-4 mr-auto">Box 1</h1>
-                    <h2 class="mb-4">date range - end</h2>
+        <!-- Tab Content -->
+        <div id="tab-1" class="tab-content active">
+            <!-- Box Entries -->
+            <div class="centered-box-container">
+                <div class="centered-box-content">
+                    <div class="flex flex-row items-center">
+                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 1</h1>
+                        <h2 class="mb-4">date range - end</h2>
+                    </div>
+                    <div class="flex flex-row items-center mr-auto">
+                        <img src="assets/sched.png" alt="Image 1" class="slight-round match mb-4 mr-5">
+                        <ul class="flex flex-col items">
+                            <li class="mb-2"> > Here is where I talk about the things and the stuff.</li>
+                            <li class="mb-2"> > Great, isn't it?</li>
+                            <li class="mb-2"> > Really, just super rad; All the skills and stuff and doododododod</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="flex flex-row items-center mr-auto">
-                    <img src="assets/sched.png" alt="Image 1" class="slight-round match mb-4 mr-5">
-                    <ul class="flex flex-col items">
-                        <li class="mb-2"> > Here is where I talk about the things and the stuff.</li>
-                        <li class="mb-2"> > Great, isn't it?</li>
-                        <li class="mb-2"> > Really, just super rad; All the skills and stuff and doododododod</li>
-                    </ul>
+            </div>
+
+            <div class="centered-box-container">
+                <div class="centered-box-content">
+                    <div class="flex flex-row items-center">
+                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 2</h1>
+                        <h2 class="mb-4">date range - end</h2>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <img src="assets/sched.png" alt="Image 2" class="slight-round match mb-4 mr-auto">
+                        <ul class="flex flex-col items">
+                            <li class="mb-2"> > Bullet Point 1</li>
+                            <li class="mb-2"> > Bullet Point 2</li>
+                            <li class="mb-2"> > Bullet Point 3</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="centered-box-container">
-            <div class="centered-box-content">
-                <div class="flex flex-row items-center">
-                    <h1 class="text-3xl font-bold mb-4 mr-auto">Box 2</h1>
-                    <h2 class="mb-4">date range - end</h2>
-                </div>
-                <div class="flex flex-row items-center">
-                    <img src="assets/sched.png" alt="Image 2" class="slight-round match mb-4 mr-auto">
-                    <ul class="flex flex-col items">
-                        <li class="mb-2"> > Bullet Point 1</li>
-                        <li class="mb-2"> > Bullet Point 2</li>
-                        <li class="mb-2"> > Bullet Point 3</li>
-                    </ul>
-                </div>
-            </div>
+
+        <div id="tab-2" class="tab-content">
+            <p>Content for Tab 2 goes here.</p>
+        </div>
+
+        <div id="tab-3" class="tab-content">
+            <p>Content for Tab 3 goes here.</p>
         </div>
 
     </div>
+
+    <script src="scripting.js"></script>
 </body>
 
 </html>
