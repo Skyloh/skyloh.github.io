@@ -4,13 +4,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            const targetTab = button.getAttribute('data-tab');
+            // bold handler
+            // const targetTab = button.getAttribute('data-tab');
+            buttons.forEach(b => {
+                // b.classList.remove('active');
+                b.classList.remove('font-bold');
+            });
+            // contents.forEach(c => c.classList.remove('active'));
+            // button.classList.add('active');
+            button.classList.add('font-bold');
+            
+            // sorting
+            const entries = document.querySelectorAll('entry')
 
-            buttons.forEach(b => b.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
+            const buttonType = button.getAttribute('type');
 
-            button.classList.add('active');
-            document.getElementById(targetTab).classList.add('active');
+            entries.sort((a, b) => {
+                const aID = a.id;
+                const bID = b.id;
+
+                const aHasType = aID.includes(buttonType);
+                const bHasType = bID.includes(buttonType);
+
+                if (aHasType && bHasType) {
+                    const aInt = parseInt(aID.charAt(aID.length - 1), 10);
+                    const bInt = parseInt(aID.charAt(aID.length - 1), 10);
+
+                    return aInt - bInt;
+                } else if (aHasType) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+
+            const container = document.getElementByClassName('tab-content');
+
+            entries.forEach((item) => {
+                container.appendChild(item);
+            })
+
+            // document.getElementById(targetTab).classList.add('active');
         });
     });
 
@@ -20,3 +54,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('dark');
     });
 });
+

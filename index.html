@@ -13,7 +13,7 @@
 
         <div class="flex flex-row items-center justify-center">
             <button id="modeToggle" class="my-2">
-                <img src="/assets/sun.png" alt="DarkMode" width="45" class="darkmode-toggle">
+                <img src="/assets/sun.png" alt="DarkMode" width="45" class="toggle-invert">
             </button>
         </div>
 
@@ -36,56 +36,84 @@
                         </div>
                         <h3> | </h3>
                         <div class="flex flex-row items-center">
-                            <img src="/assets/discord.png" alt="Discord" width="25">
-                            <h3>@liemon</h3>
+                            <img src="/assets/discord.png" alt="Discord" width="25" class="toggle-invert mr-1">
+                            <h3>@liemons</h3>
                         </div>
                         <h3> | </h3>
                         <h3>610-348-4303</h3>
                     </div>
 
                     <div class="flex flex-row items-center mt-4">
-                        <a href="https://github.com/Skyloh"> <u>github</u> </a>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://github.com/Skyloh">
+                            <u>github</u> </a>
                         <h3> | </h3>
-                        <a href="https://skyloh.itch.io/"> <u>itch.io</u> </a>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://skyloh.itch.io/">
+                            <u>itch.io</u> </a>
                         <h3> | </h3>
-                        <a href="/assets/profile.PNG" download> <u>resume</u> </a>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/profile.PNG" download>
+                            <u>resume</u> </a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Tab Buttons -->
-        <div class="flex flex-row items-center justify-center" style="gap:15px">
-            <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-1">Computer
-                Science</button>
-            <h3> | </h3>
-            <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-2">Game
-                Development</button>
-            <h3> | </h3>
-            <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" data-tab="tab-3">Tab 3</button>
+        <div class="flex flex-col items-center justify-center">
+            <h3>What are you <i>mainly</i> here to see?</h3>
+            <div class="flex flex-row items-center justify-center" style="gap:15px">
+                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" type="CS">Computer
+                    Science</button>
+                <h3> | </h3>
+                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game
+                    Development</button>
+                <h3> | </h3>
+                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="O">Tab 3</button>
+            </div>
         </div>
 
         <!-- Tab Content -->
         <div id="tab-1" class="tab-content active">
             <!-- Box Entries -->
-            <div class="centered-box-container">
-                <div class="centered-box-content">
-                    <div class="flex flex-row items-center">
-                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 1</h1>
-                        <h2 class="mb-4">date range - end</h2>
+            <div id="GD 1" class="entry centered-box-container">
+                <div class="fade pop-element centered-box-content flex flex-col items-center">
+
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/Skyloh/project-beat"><u>Project Beat</u></a>
+                        </h1>
+                        <h2 class="mb-4">December 2023 - Present</h2>
                     </div>
+
                     <div class="flex flex-row items-center mr-auto">
-                        <img src="assets/sched.png" alt="Image 1" class="slight-round match mb-4 mr-5">
-                        <ul class="flex flex-col items">
-                            <li class="mb-2"> > Here is where I talk about the things and the stuff.</li>
-                            <li class="mb-2"> > Great, isn't it?</li>
-                            <li class="mb-2"> > Really, just super rad; All the skills and stuff and doododododod</li>
-                        </ul>
+                        <video class="mr-5 slight-round" controls>
+                            <source src="assets/projectbeat/scrubdemo.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="flex flex-col justify-center">
+                            <!-- TODO: Add gameplay images here. -->
+                        </div>
                     </div>
+
+                    <p style="font-size: medium;" class="mt-2">
+                        What is this thing? Here is where I'll explain it. Like, why I did it, what I was trying to
+                        accomplish, that sorta stuff.
+                    </p>
+
+                    <h1 class="mt-4 font-bold">- Features -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Here is where I talk about the things and the stuff.</li>
+                        <li class="mb-2"> > Great, isn't it? Love unity.</li>
+                        <li class="mb-2"> > technical skills, algorithms, data structures, describe gameplay.</li>
+                    </ul>
+
                 </div>
             </div>
 
-            <div class="centered-box-container">
+
+
+            <div id="GD 2" class="entry centered-box-container">
                 <div class="centered-box-content">
                     <div class="flex flex-row items-center">
                         <h1 class="text-3xl font-bold mb-4 mr-auto">Box 2</h1>
@@ -101,7 +129,27 @@
                     </div>
                 </div>
             </div>
+
+            <div id="CS 2" class="entry centered-box-container">
+                <div class="centered-box-content">
+                    <div class="flex flex-row items-center">
+                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 3</h1>
+                        <h2 class="mb-4">date range - end</h2>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <img src="assets/sched.png" alt="Image 2" class="slight-round match mb-4 mr-auto">
+                        <ul class="flex flex-col items">
+                            <li class="mb-2"> > Bullet Point 1</li>
+                            <li class="mb-2"> > Bullet Point 2</li>
+                            <li class="mb-2"> > Bullet Point 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!--
+        Removed in favor of sorting
 
         <div id="tab-2" class="tab-content">
             <p>Content for Tab 2 goes here.</p>
@@ -110,6 +158,7 @@
         <div id="tab-3" class="tab-content">
             <p>Content for Tab 3 goes here.</p>
         </div>
+        -->
 
     </div>
 

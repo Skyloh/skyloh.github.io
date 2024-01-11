@@ -17,13 +17,13 @@ h1, h2, li {
     font-family:'Courier New', Courier, monospace;
 }
 
-h3, a {
+h3, a, p {
     font-size: small;
     color:#464646;
     font-family:'Courier New', Courier, monospace;
 }
 
-.dark h3, .dark a {
+.dark h3, .dark a, .dark p {
     font-size: small;
     color:gainsboro;
     font-family:'Courier New', Courier, monospace;
@@ -102,6 +102,29 @@ h3, a {
     display: block;
 }
 
-.dark .darkmode-toggle {
+.dark .toggle-invert {
     filter:invert(1);
+}
+
+.expand-flex-row {
+    justify-content: space-between; 
+    width:100%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade {
+    animation: fadeIn 1s ease-out;
+}
+
+.pop-element {
+    transform-origin: center;
+    transition: transform 0.1s ease-in;
+}
+
+.pop-element:hover {
+    transform: scale(1.1);
 }
