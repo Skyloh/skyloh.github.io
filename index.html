@@ -9,7 +9,12 @@
 
 <body class="dark">
     <!-- Main Container -->
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-screen-lg">
+
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img src="" alt="Lightbox Image" id="lightboxImage" class="lightbox-content">
+        </div>
 
         <div class="flex flex-row items-center justify-center">
             <button id="modeToggle" class="my-2">
@@ -134,7 +139,7 @@
                         -->
 
                         <!-- for now, temp image-->
-                        <img src="/assets/projectdalle/entrance.png" alt="entrance" width="66%" class="pop-element mx-2">
+                        <img src="/assets/projectdalle/entrance.png" alt="entrance" width="66%" class="pop-element mx-2" onclick="openLightbox('/assets/projectdalle/entrance.png')">
 
                         <div class="flex flex-col items-center justify-center">
                             <img src="/assets/projectdalle/painting.png" alt="gameplay-painting" style="object-fit: cover;" class="pop-element">
