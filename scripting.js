@@ -1,11 +1,9 @@
-function openLightbox(imagePath) {
+function openLightbox(clickedImage) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
 
     lightbox.style.display = 'flex';
-    lightboxImage.src = imagePath;
-
-    console.log("called");
+    lightboxImage.src = clickedImage.src;
 }
 
 function closeLightbox() {
@@ -15,7 +13,6 @@ function closeLightbox() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {

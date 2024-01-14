@@ -12,7 +12,7 @@
     <div class="container mx-auto max-w-screen-lg">
 
         <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
+            <h1 class="close" onclick="closeLightbox()">X</h1>
             <img src="" alt="Lightbox Image" id="lightboxImage" class="lightbox-content">
         </div>
 
@@ -67,6 +67,7 @@
             <h3>What are you <i>mainly</i> here to see?</h3>
             <div class="flex flex-row items-center justify-center" style="gap:15px">
                 <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game Development</button>
+                <h3> | </h3>
                 <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" type="CS">Computer Science</button>
 
                 <!-- Until there exists other stuff, comment this out.
@@ -131,19 +132,13 @@
                     </div>
 
                     <div class="flex flex-row items-center justify-center">
-
-                        <!-- Add video here. 
-                        <video class="mr-5 slight-round" controls>
-                            <source src="assets/projectbeat/scrubdemo.mp4" type="video/mp4">
+                        <video class="mr-5 slight-round" width="66%" controls>
+                            <source src="assets/projectdalle/dall-e.mp4" type="video/mp4">
                         </video>
-                        -->
-
-                        <!-- for now, temp image-->
-                        <img src="/assets/projectdalle/entrance.png" alt="entrance" width="66%" class="pop-element mx-2" onclick="openLightbox('/assets/projectdalle/entrance.png')">
 
                         <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting" style="object-fit: cover;" class="pop-element">
-                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc" style="object-fit: cover;" class="pop-element">
+                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc" class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
 
