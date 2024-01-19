@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 const aHasType = aID.includes(buttonType);
                 const bHasType = bID.includes(buttonType);
 
-                if (aHasType && bHasType) {
+                if (aHasType == bHasType) {
                     const aInt = parseInt(aID.charAt(aID.length - 1), 10);
-                    const bInt = parseInt(aID.charAt(aID.length - 1), 10);
+                    const bInt = parseInt(bID.charAt(bID.length - 1), 10);
 
                     return bInt - aInt;
                 } else if (aHasType) {
-                    return -1;
-                } else {
                     return 1;
+                } else {
+                    return -1;
                 }
-            });
+            }).reverse();
 
             const container = document.getElementById('tab-1');
 
