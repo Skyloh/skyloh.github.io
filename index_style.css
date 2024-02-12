@@ -1,3 +1,5 @@
+/* compile with "npx tailwindcss -i index_style.css -o stylesheet.css" --watch */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
