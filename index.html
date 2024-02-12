@@ -64,7 +64,7 @@
 
         <!-- Tab Buttons -->
         <div class="flex flex-col items-center justify-center">
-            <h3>What are you <i>mainly</i> here to see?</h3>
+            <h3>What are you here to see?</h3>
             <div class="flex flex-row items-center justify-center" style="gap:15px">
                 <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game Development</button>
                 <h3> | </h3>
@@ -162,6 +162,46 @@
             </div>
 
             <!--What Remains-->
+            <div id="GD 3" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+                    
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/Games-at-Northeastern/What-Remains-of-Me"><u>What Remains of Me</u></a>
+                        </h1>
+                        <h2 class="mb-4">Sept. 2023 - Dec. 2023</h2>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center">
+                        <video class="mr-5 slight-round" width="66%" controls>
+                            <source src="assets/moveshoot/moveshoot.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="/assets/moveshoot/move.png" alt="gameplay-move" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/moveshoot/game.png" alt="gameplay-game" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+
+                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500" href="https://whatremainsofme.itch.io/what-remains-of-me"><u>(old release build) itch</u></a>
+
+                    <p style="font-size: medium;" class="mt-2">
+                        A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio environment with 40 other students, I continued work on a student-led project. I primarily contributed to the codebase with custom utility tools (e.g. facilitating puzzle design with line rendering utilities) and refactoring of old student code, but I also worked on writing and implementing dialogue through the external <b>Inky</b> application. I worked in a small team with 6 other interdisciplinary students in which we would create weekly tasks, following the <b>Agile</b> workflow with <b>Jira</b>.
+                    </p>
+
+                    <h1 class="mt-4 font-bold">- Features and Tools I Developed -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Made in <b>Unity</b> with the <b>Inky</b> dialogue system and application.</li>
+                        <li class="mb-2"> > Used <b>git</b>, <b>Github Desktop</b>, and <b>Jira</b> to facilitate source control and story-point tasks.</li>
+                        <li class="mb-2"> > Refactored moving-element (e.g. platforms) implementation to generalize behavior.</li>
+                        <li class="mb-2"> > Implemented <b>custom utility tools</b> for designers to facilitate level decoration and design.</li>
+                        <li class="mb-2"> > Wrote documentation and guides-of-use for custom developer tools, script componenets, and the Inky software.</li>
+                    </ul>
+
+                </div>
+            </div>
 
             <!--Move Shoot-->
             <div id="GD 4" class="fade pop-element entry centered-box-container">
@@ -204,27 +244,84 @@
             </div>
 
             <!--Summer CC-->
+            <div id="GD 5" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+                    
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/Skyloh/summer-cc"><u>Summer CC</u></a>
+                        </h1>
+                        <h2 class="mb-4">July 2023</h2>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center">
+                        <video class="mr-5 slight-round" controls>
+                            <source src="assets/summercc/summercc.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+
+                    <p style="font-size: medium;" class="mt-2">
+                        A short summer project where I challenged myself to create a non-kinematic state-machine-based character controller that was different from the standard implementation in two ways:
+                        <ol>
+                            <li>1 - The state machine was composition-based, meaning states could be pulled in and out of the state machine willy-nilly at runtime with no adverse/unpredicatable effects.</li>
+                            <li>2 - The player used a floating-capsule implementation as opposed to the ground-contact capsule implementation which often had implementation quirks with stairs or elevation.</li>
+                        </ol>
+                    </p>
+
+                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Made in <b>Unity</b> with animations sourced from <b>Mixamo</b> and player model from the
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:medium"
+                                href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity Asset Store</u></a>
+                        </li>
+                        <li class="mb-2"> > <b>Composition-based non-kinematic</b> player controller with a <b>floating collider</b> implementation, stair-slope handling, and other polishes.</li>
+                    </ul>
+
+                </div>
+            </div>
+
             <!--Physics Game-->
             <!--Chico Mod-->
             <!--Slash Prototype-->
 
-            <!--TEMPLATE CS-->
-            <div id="CS 2" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content">
-                    <div class="flex flex-row items-center">
-                        <h1 class="text-3xl font-bold mb-4 mr-auto">Box 3</h1>
-                        <h2 class="mb-4">date range - end</h2>
+            <!--Java Journal-->
+            <div id="CS 5" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+                    
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            CS | Java Journal
+                        </h1>
+                        <h2 class="mb-4">June 2023</h2>
                     </div>
-                    <div class="flex flex-row items-center">
-                        <img src="assets/sched.png" alt="Image 2" class="slight-round match mb-4 mr-auto">
-                        <ul class="flex flex-col items">
-                            <li class="mb-2"> > Bullet Point 1</li>
-                            <li class="mb-2"> > Bullet Point 2</li>
-                            <li class="mb-2"> > Bullet Point 3</li>
-                        </ul>
+
+                    <div class="flex flex-row items-center justify-center">
+                        <video class="mr-5 slight-round" width="66%" controls>
+                            <source src="assets/journal/jimbly.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="/assets/journal/PA05.jpg" alt="uml" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/journal/GUIScreenshot3.png" alt="gui-example2" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                        </div>
                     </div>
+
+                    <p style="font-size: medium;" class="mt-2">
+                        The final project for our <b>Object-Oriented Design</b> class. With two other students, we made a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to create an easily extensible codebase with modular implementations that would be compounded upon with further iterations of the assignment. One of the lightbox images includes the UML diagram we made for the code layout of our project.
+                    </p>
+
+                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Used <b>Java</b>, <b>JavaFX</b>, <b>git</b>, and <b>Gradle</b>.</li>
+                        <li class="mb-2"> > Implemented File I/O with password locks, custom dialogue boxes, FXML-based UI design, and unit-tested models/controllers.</li>
+                    </ul>
+
                 </div>
             </div>
+
         </div>
 
         <!--
