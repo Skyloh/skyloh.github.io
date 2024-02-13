@@ -175,14 +175,9 @@
                     </div>
 
                     <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" width="66%" controls>
-                            <source src="assets/moveshoot/moveshoot.mp4" type="video/mp4">
+                        <video class="mr-5 slight-round" controls>
+                            <source src="assets/remains/remainsgame.mp4" type="video/mp4">
                         </video>
-
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/moveshoot/move.png" alt="gameplay-move" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/moveshoot/game.png" alt="gameplay-game" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                        </div>
                     </div>
 
                     <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500" href="https://whatremainsofme.itch.io/what-remains-of-me"><u>(old release build) itch</u></a>
@@ -244,7 +239,7 @@
             </div>
 
             <!--Summer CC-->
-            <div id="GD 5" class="fade pop-element entry centered-box-container">
+            <div id="GD 6" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
                     
                     <div class="flex flex-row items-center expand-flex-row">
@@ -284,8 +279,54 @@
             </div>
 
             <!--Physics Game-->
-            <!--Chico Mod-->
-            <!--Slash Prototype-->
+            <div id="GD 7" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+                    
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/Skyloh/UnityPhysicsGame/tree/main"><u>Physics Game</u></a>
+                        </h1>
+                        <h2 class="mb-4">May 2022</h2>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center">
+                        <img src="/assets/physicsgame/cubethrow.gif" width="66%" alt="gameplay-throw" class="mr-5 pop-element lightboxable-image" onclick="openLightbox(this)">
+
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="/assets/physicsgame/dissolver.gif" alt="gameplay-dissolve" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/physicsgame/plat.gif" alt="gameplay-platform" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+
+
+                    <p style="font-size: medium;" class="mt-2">
+                        The end result of my senior project. My goal was to create a small, polish, proof-of-concept for a puzzle game all about attraction and repulsion. To do this, I learned new tools like ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and modular OoD in order to create game mechanics like my reusable puzzle system and the gravitational-pull system. The latter allowed me to extend the game's original mechanic to affect the player as well, which I was pleasantly surprised by.
+                    </p>
+                    <p style="font-size: medium;" class="mt-2">
+                        Below is the prototype of the game alongside another game mechanic of the finished product.
+                    </p>
+
+                    <div class="flex flex-row items-center justify-center mt-4">
+                        <video class="mr-5 slight-round" width="50%" controls>
+                            <source src="assets/physicsgame/proto.mp4" type="video/mp4">
+                        </video>
+                        <video class="mr-5 slight-round" width="50%" controls>
+                            <source src="assets/physicsgame/fly.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
+                    <ul class="flex flex-col items">
+                        <li class="mb-2"> > Made in <b>Unity HDRP</b> with <b>Blender</b>, <b>InputSystem</b>, and <b>ShaderGraph</b></li>
+                        <li class="mb-2"> > First-person physics-based puzzle-solving levels with unique puzzle gimmicks and an extensible puzzle development system.</li>
+                        <li class="mb-2"> > Utilized overlay cameras to produce user HUD.</li>
+                        <li class="mb-2"> > Custom-wrote a non-kinematic rigidbody player controller driven by a state machine.</li>
+                    </ul>
+
+                </div>
+            </div>
 
             <!--Java Journal-->
             <div id="CS 5" class="fade pop-element entry centered-box-container">
