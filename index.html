@@ -26,38 +26,50 @@
         <div class="flex items-center justify-center" style="min-height: 25vh;">
 
             <div class="flex flex-row header-box">
-                <div class="hidden lg:block flex flex-col items-center justify-center mr-5" style="min-width: fit-content;">
-                    <img src="/assets/profile.PNG" alt="Me" width="125" class="slight-round border-box">
+                <div class="flex flex-col items-center justify-center mr-5" style="min-width: fit-content;">
+                    <img src="/assets/profile.PNG" alt="Me" width="100" class="slight-round border-box">
                 </div>
 
                 <div class="flex flex-col">
                     <h1 class="text-3xl">Nathan Gooneratne</h1>
                     <h3 class="pb-4 text-xs">Computer Science and Game Development @ Northeastern University</h3>
 
-                    <div class="flex flex-row items-center" style="gap: 10px;">
-                        <div class="flex flex-col items-center justify-center">
+                    <!--Old reworked thing to fit mobile without tailwind size-headers
+                    <h3><b>- gooneratne.n@northeastern.edu</b></h3>
+                    <h3>- nathan.gooneratne@gmail.com</h3>
+                    <div class="flex flex-row items-center">
+                        <h3 class="pr-1">- @liemons</h3>
+                        <img src="/assets/discord.png" alt="Discord" width="25" class="toggle-invert">
+                    </div>
+                    <h3>- 610-348-4303</h3>-->
+
+                    <div class="flex sm:flex-row flex-col sm:items-center" style="gap: 10px;">
+                        <div class="flex flex-col sm:items-center justify-center">
                             <h3><b>gooneratne.n@northeastern.edu</b></h3>
                             <h3>nathan.gooneratne@gmail.com</h3>
                         </div>
-                        <h3> | </h3>
+                        <h3 class="hidden sm:block"> | </h3>
                         <div class="flex flex-row items-center">
                             <img src="/assets/discord.png" alt="Discord" width="25" class="toggle-invert mr-1">
                             <h3>@liemons</h3>
                         </div>
-                        <h3> | </h3>
+                        <h3 class="hidden sm:block"> | </h3>
                         <h3>610-348-4303</h3>
                     </div>
 
-                    <div class="flex flex-row items-center mt-4">
+                    <div class="flex sm:flex-row flex-col sm:items-center mt-4">
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://www.linkedin.com/in/nathan-gooneratne/">
+                            <u>linkedin</u> </a>
+                            <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://github.com/Skyloh">
                             <u>github</u> </a>
-                        <h3> | </h3>
+                            <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://skyloh.itch.io/">
                             <u>itch.io</u> </a>
-                        <h3> | </h3>
+                            <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/GD Tailored Resume.pdf" download>
                             <u>resume(GD)</u> </a>
-                        <h3> | </h3>
+                            <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/CS Tailored Resume.pdf" download>
                             <u>resume(CS)</u> </a>
                     </div>

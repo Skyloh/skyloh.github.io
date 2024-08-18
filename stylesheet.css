@@ -620,6 +620,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -642,6 +646,10 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
 }
 
 .text-3xl {
@@ -842,4 +850,18 @@ h3, a, p {
 :is(.dark .dark\:hover\:text-amber-500:hover) {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
 }
