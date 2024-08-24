@@ -26,8 +26,9 @@
         <div class="flex items-center justify-center" style="min-height: 25vh;">
 
             <div class="flex flex-row header-box">
-                <div class="flex flex-col items-center justify-center mr-5" style="min-width: fit-content;">
-                    <img src="/assets/profile.PNG" alt="Me" width="100" class="slight-round border-box">
+                <div class="flex flex-col items-center justify-center hidden sm:block mr-5"
+                    style="min-width: fit-content;">
+                    <img src="/assets/profile.PNG" alt="Me" width="125" class="slight-round border-box">
                 </div>
 
                 <div class="flex flex-col">
@@ -58,19 +59,22 @@
                     </div>
 
                     <div class="flex sm:flex-row flex-col sm:items-center mt-4">
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://www.linkedin.com/in/nathan-gooneratne/">
-                            <u>linkedin</u> </a>
-                            <h3 class="hidden sm:block"> | </h3>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500"
+                            href="https://www.linkedin.com/in/nathan-gooneratne/">
+                            <u><b>linkedin</b></u> </a>
+                        <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://github.com/Skyloh">
                             <u>github</u> </a>
-                            <h3 class="hidden sm:block"> | </h3>
+                        <h3 class="hidden sm:block"> | </h3>
                         <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://skyloh.itch.io/">
                             <u>itch.io</u> </a>
-                            <h3 class="hidden sm:block"> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/GD Tailored Resume.pdf" download>
+                        <h3 class="hidden sm:block"> | </h3>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/GD Tailored Resume.pdf"
+                            download>
                             <u>resume(GD)</u> </a>
-                            <h3 class="hidden sm:block"> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/CS Tailored Resume.pdf" download>
+                        <h3 class="hidden sm:block"> | </h3>
+                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/CS Tailored Resume.pdf"
+                            download>
                             <u>resume(CS)</u> </a>
                     </div>
                 </div>
@@ -81,11 +85,14 @@
         <div class="flex flex-col items-center justify-center">
             <h3>What are you here to see?</h3>
             <div class="flex flex-row items-center justify-center" style="gap:15px">
-                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="GD">Game Development</button>
+                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500"
+                    style="text-decoration: underline;" type="GD">Game Development</button>
                 <h3> | </h3>
-                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500" type="CS">Computer Science</button>
+                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500"
+                    style="text-decoration: underline;" type="CS">Computer Science</button>
                 <h3> | </h3>
-                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500" type="O">Favorites</button>
+                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500"
+                    style="text-decoration: underline;" type="O">Favorites</button>
             </div>
         </div>
 
@@ -93,6 +100,30 @@
         <div id="tab-1" class="tab-content active">
             <!-- Box Entries -->
 
+            <!--GD Oil City-->
+            <div id="GD 1" class="fade pop-element entry centered-box-container">
+                <div class="centered-box-content flex flex-col items-center">
+
+                    <div class="flex flex-row items-center expand-flex-row">
+                        <h1 class="text-3xl font-bold mb-4">
+                            GD |
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                href="https://github.com/remyrouth/OilCity/"><u>Oil City</u></a>
+                        </h1>
+                        <h2 class="mb-4">July 2024 - August 2024</h2>
+                    </div>
+
+                    <video class="mr-5 slight-round" width="100%" controls>
+                        <source src="assets/oilcity/videoplayback.mp4" type="video/mp4">
+                    </video>
+
+
+                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
+                        href="https://romulus162.itch.io/oil-city"><u>play on itch</u></a>
+
+
+                </div>
+            </div>
 
             <!--GD Beat-->
             <div id="GD 1" class="fade pop-element entry centered-box-container">
@@ -118,19 +149,30 @@
                     </div>
 
                     <p style="font-size: medium;" class="mt-2">
-                        A <b>solo personal project (WIP)</b> in which I challenged myself to create a modular fighting-game framework. The main focus of this was particularly on the structural challenge of designing asset code structures that are easy for designers to create stuff with, but also powerful in their modularity. I evaluated several approaches to implementing move data, but settled with Scriptable Objects and repurposing Unity’s Mechanim State Machine Animation States.
+                        A <b>solo personal project (WIP)</b> in which I challenged myself to create a modular
+                        fighting-game framework. The main focus of this was particularly on the structural challenge of
+                        designing asset code structures that are easy for designers to create stuff with, but also
+                        powerful in their modularity. I evaluated several approaches to implementing move data, but
+                        settled with Scriptable Objects and repurposing Unity’s Mechanim State Machine Animation States.
                         <br>
                         <br>
-                        I used ripped sprites from <i>Scott Pilgrim VS The World: The Game</i> so I could focus on the programming. Every script is custom-written in Unity, with the only package being InputSystem.
+                        I used ripped sprites from <i>Scott Pilgrim VS The World: The Game</i> so I could focus on the
+                        programming. Every script is custom-written in Unity, with the only package being InputSystem.
                     </p>
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
                         <li class="mb-2"> > Made in <b>Unity</b> with <b>InputSystem Package</b></li>
-                        <li class="mb-2"> > Utilized custom-written <b>Python</b> sprite splicing script to facilitate animation importing</li>
-                        <li class="mb-2"> > Wrote custom <b>input-buffering data structure</b> with a <b>binary-insertion algorithm</b></li>
-                        <li class="mb-2"> > Implemented <b>animation scrubber</b> for easier debug viewing of hitboxes and parameters</li>
-                        <li class="mb-2"> > Developed a modular "Track" and "Sequence" data storage system <b>independant of AnimationClips</b> without AnimationEvents</li>
+                        <li class="mb-2"> > Utilized custom-written <b>Python</b> sprite splicing script to facilitate
+                            animation importing</li>
+                        <li class="mb-2"> > Wrote custom <b>input-buffering data structure</b> with a
+                            <b>binary-insertion algorithm</b>
+                        </li>
+                        <li class="mb-2"> > Implemented <b>animation scrubber</b> for easier debug viewing of hitboxes
+                            and parameters</li>
+                        <li class="mb-2"> > Developed a modular "Track" and "Sequence" data storage system
+                            <b>independant of AnimationClips</b> without AnimationEvents
+                        </li>
                     </ul>
 
                 </div>
@@ -140,7 +182,7 @@
             <!--GD Dall E-->
             <div id="GD 2" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             GD |
@@ -156,21 +198,30 @@
                         </video>
 
                         <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
 
                     <p style="font-size: medium;" class="mt-2">
-                        A solo personal project puzzle game about matching Dall-E generated pictures to their original prompts. The main goal of the project was to finish and polish a project completely. Some sub-goals were creating an easily-approachable game, extensible dialogue system, dynamic and interesting NPCs, and variable levels of win conditions rather than a cut-and-dry right-or-wrong puzzle system.
+                        A solo personal project puzzle game about matching Dall-E generated pictures to their original
+                        prompts. The main goal of the project was to finish and polish a project completely. Some
+                        sub-goals were creating an easily-approachable game, extensible dialogue system, dynamic and
+                        interesting NPCs, and variable levels of win conditions rather than a cut-and-dry right-or-wrong
+                        puzzle system.
                     </p>
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
                         <li class="mb-2"> > Made in <b>Unity</b> with <b>Blender</b> and <b>Maya</b></li>
-                        <li class="mb-2"> > All assets custom-made, including models, animations, scripts, and images (paintings AI-generated)</li>
-                        <li class="mb-2"> > Programmed NPCs with <b>Navmesh</b> collision-avoidance roaming behaviors and custom animations with ShapeKeys and dynamic <b>Rigging</b> multi-aim constraints</li>
-                        <li class="mb-2"> > Built custom <b>dialogue system</b> with variable text speed and dialogue-world events</li>
+                        <li class="mb-2"> > All assets custom-made, including models, animations, scripts, and images
+                            (paintings AI-generated)</li>
+                        <li class="mb-2"> > Programmed NPCs with <b>Navmesh</b> collision-avoidance roaming behaviors
+                            and custom animations with ShapeKeys and dynamic <b>Rigging</b> multi-aim constraints</li>
+                        <li class="mb-2"> > Built custom <b>dialogue system</b> with variable text speed and
+                            dialogue-world events</li>
                     </ul>
 
                 </div>
@@ -179,12 +230,13 @@
             <!--What Remains-->
             <div id="GD 3" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             GD |
                             <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Games-at-Northeastern/What-Remains-of-Me"><u>What Remains of Me</u></a>
+                                href="https://github.com/Games-at-Northeastern/What-Remains-of-Me"><u>What Remains of
+                                    Me</u></a>
                         </h1>
                         <h2 class="mb-4">Sept. 2023 - Dec. 2023</h2>
                     </div>
@@ -195,19 +247,31 @@
                         </video>
                     </div>
 
-                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500" href="https://whatremainsofme.itch.io/what-remains-of-me"><u>(old release build) itch</u></a>
+                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
+                        href="https://whatremainsofme.itch.io/what-remains-of-me"><u>(old release build) itch</u></a>
 
                     <p style="font-size: medium;" class="mt-2">
-                        A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio environment with 40 other students, I continued work on a student-led project. I primarily contributed to the codebase with custom utility tools (e.g. facilitating puzzle design with line rendering utilities) and refactoring of old student code, but I also worked on writing and implementing dialogue through the external <b>Inky</b> application. I worked in a small team with 6 other interdisciplinary students in which we would create weekly tasks, following the <b>Agile</b> workflow with <b>Jira</b>.
+                        A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio
+                        environment with 40 other students, I continued work on a student-led project. I primarily
+                        contributed to the codebase with custom utility tools (e.g. facilitating puzzle design with line
+                        rendering utilities) and refactoring of old student code, but I also worked on writing and
+                        implementing dialogue through the external <b>Inky</b> application. I worked in a small team
+                        with 6 other interdisciplinary students in which we would create weekly tasks, following the
+                        <b>Agile</b> workflow with <b>Jira</b>.
                     </p>
 
                     <h1 class="mt-4 font-bold">- Features and Tools I Developed -</h1>
                     <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity</b> with the <b>Inky</b> dialogue system and application.</li>
-                        <li class="mb-2"> > Used <b>git</b>, <b>Github Desktop</b>, and <b>Jira</b> to facilitate source control and story-point tasks.</li>
-                        <li class="mb-2"> > Refactored moving-element (e.g. platforms) implementation to generalize behavior.</li>
-                        <li class="mb-2"> > Implemented <b>custom utility tools</b> for designers to facilitate level decoration and design.</li>
-                        <li class="mb-2"> > Wrote documentation and guides-of-use for custom developer tools, script componenets, and the Inky software.</li>
+                        <li class="mb-2"> > Made in <b>Unity</b> with the <b>Inky</b> dialogue system and application.
+                        </li>
+                        <li class="mb-2"> > Used <b>git</b>, <b>Github Desktop</b>, and <b>Jira</b> to facilitate source
+                            control and story-point tasks.</li>
+                        <li class="mb-2"> > Refactored moving-element (e.g. platforms) implementation to generalize
+                            behavior.</li>
+                        <li class="mb-2"> > Implemented <b>custom utility tools</b> for designers to facilitate level
+                            decoration and design.</li>
+                        <li class="mb-2"> > Wrote documentation and guides-of-use for custom developer tools, script
+                            componenets, and the Inky software.</li>
                     </ul>
 
                 </div>
@@ -216,7 +280,7 @@
             <!--Move Shoot-->
             <div id="GD 4" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             GD |
@@ -232,22 +296,56 @@
                         </video>
 
                         <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/moveshoot/move.png" alt="gameplay-move" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/moveshoot/game.png" alt="gameplay-game" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/moveshoot/move.png" alt="gameplay-move"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/moveshoot/game.png" alt="gameplay-game"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
 
-                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500" href="https://skyloh.itch.io/move-shoot"><u>itch</u></a>
+                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
+                        href="https://skyloh.itch.io/move-shoot"><u>play on itch</u></a>
 
-                    <p style="font-size: medium;" class="mt-2">
-                        A game jam submission for Ludum Dare 54. Working in a team of 5, I led development on a movement-shooter with a limited-space twist. I mainly contributed programming and game design, but also mentored others in learning Blender for animation and modeling, and guided the programming division with tasks and code-design structures and interfaces.
-                    </p>
+                        <div 
+                        data-accordion="open" 
+                        class="flex flex-col expand-flex-row items-left my-2"
+                        data-active-classes="dark:text-amber-500">
+                            <h2 id="accordion-heading-1">
+                                <button type="button"
+                                    data-accordion-target="#accordion-body-1" aria-expanded="false"
+                                    aria-controls="accordion-body-1">
+                                    <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Project Description</h4>
+                                </button>
+                            </h2>
+                            <div id="accordion-body-1" class="hidden my-2" aria-labelledby="accordion-heading-1">
+                                <p style="font-size: medium;">
+                                    A game jam submission for Ludum Dare 54. Working in a team of 5, I led development on a
+                                    movement-shooter with a limited-space twist. I mainly contributed programming and game design,
+                                    but also mentored others in learning Blender for animation and modeling, and guided the
+                                    programming division with tasks and code-design structures and interfaces.
+                                </p>
+                            </div>
+                            <h2 id="accordion-heading-2">
+                                <button type="button"
+                                    data-accordion-target="#accordion-body-2" aria-expanded="false"
+                                    aria-controls="accordion-body-2">
+                                    <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Made in <b>Unity</b> with <b>Blender</b></h4>
+                                </button>
+                            </h2>
+                            <div id="accordion-body-2" class="hidden my-2" aria-labelledby="accordion-heading-2">
+                                <p>
+                                    The project used Unity 2019 as it's main engine. I helped others by providing answers to their questions on 
+                                    implementation details and Unity systems as well as operating as the lead programmer. For Blender, I instructed
+                                    the team's animator in how to use the software in addition to giving them some tips for satisfying and clean animations.
+                                </p>
+                            </div>
+                        </div>
 
-                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
                         <li class="mb-2"> > Made in <b>Unity</b> with <b>Blender</b></li>
                         <li class="mb-2"> > Movement and aim-assisted FPS with <b>7</b> speed-runnable levels</li>
-                        <li class="mb-2"> > Moment-to-moment experience with quick restart and dynamic, reaction-focused gameplay</li>
+                        <li class="mb-2"> > Moment-to-moment experience with quick restart and dynamic, reaction-focused
+                            gameplay</li>
                     </ul>
 
                 </div>
@@ -256,7 +354,7 @@
             <!--Summer CC-->
             <div id="GD 6" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             GD |
@@ -274,20 +372,26 @@
 
 
                     <p style="font-size: medium;" class="mt-2">
-                        A short summer project where I challenged myself to create a non-kinematic state-machine-based character controller that was different from the standard implementation in two ways:
-                        <ol>
-                            <li>1 - The state machine was composition-based, meaning states could be pulled in and out of the state machine willy-nilly at runtime with no adverse/unpredicatable effects.</li>
-                            <li>2 - The player used a floating-capsule implementation as opposed to the ground-contact capsule implementation which often had implementation quirks with stairs or elevation.</li>
-                        </ol>
+                        A short summer project where I challenged myself to create a non-kinematic state-machine-based
+                        character controller that was different from the standard implementation in two ways:
+                    <ol>
+                        <li>1 - The state machine was composition-based, meaning states could be pulled in and out of
+                            the state machine willy-nilly at runtime with no adverse/unpredicatable effects.</li>
+                        <li>2 - The player used a floating-capsule implementation as opposed to the ground-contact
+                            capsule implementation which often had implementation quirks with stairs or elevation.</li>
+                    </ol>
                     </p>
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity</b> with animations sourced from <b>Mixamo</b> and player model from the
+                        <li class="mb-2"> > Made in <b>Unity</b> with animations sourced from <b>Mixamo</b> and player
+                            model from the
                             <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:medium"
-                                href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity Asset Store</u></a>
+                                href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity
+                                    Asset Store</u></a>
                         </li>
-                        <li class="mb-2"> > <b>Composition-based non-kinematic</b> player controller with a <b>floating collider</b> implementation, stair-slope handling, and other polishes.</li>
+                        <li class="mb-2"> > <b>Composition-based non-kinematic</b> player controller with a <b>floating
+                                collider</b> implementation, stair-slope handling, and other polishes.</li>
                     </ul>
 
                 </div>
@@ -296,7 +400,7 @@
             <!--Physics Game-->
             <div id="GD 7" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             GD |
@@ -307,17 +411,25 @@
                     </div>
 
                     <div class="flex flex-row items-center justify-center">
-                        <img src="/assets/physicsgame/cubethrow.gif" width="66%" alt="gameplay-throw" class="mr-5 pop-element lightboxable-image" onclick="openLightbox(this)">
+                        <img src="/assets/physicsgame/cubethrow.gif" width="66%" alt="gameplay-throw"
+                            class="mr-5 pop-element lightboxable-image" onclick="openLightbox(this)">
 
                         <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/physicsgame/dissolver.gif" alt="gameplay-dissolve" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/physicsgame/plat.gif" alt="gameplay-platform" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/physicsgame/dissolver.gif" alt="gameplay-dissolve"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/physicsgame/plat.gif" alt="gameplay-platform"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
 
 
                     <p style="font-size: medium;" class="mt-2">
-                        The end result of my senior project. My goal was to create a small, polish, proof-of-concept for a puzzle game all about attraction and repulsion. To do this, I learned new tools like ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and modular OoD in order to create game mechanics like my reusable puzzle system and the gravitational-pull system. The latter allowed me to extend the game's original mechanic to affect the player as well, which I was pleasantly surprised by.
+                        The end result of my senior project. My goal was to create a small, polish, proof-of-concept for
+                        a puzzle game all about attraction and repulsion. To do this, I learned new tools like
+                        ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and modular
+                        OoD in order to create game mechanics like my reusable puzzle system and the gravitational-pull
+                        system. The latter allowed me to extend the game's original mechanic to affect the player as
+                        well, which I was pleasantly surprised by.
                     </p>
                     <p style="font-size: medium;" class="mt-2">
                         Below is the prototype of the game alongside another game mechanic of the finished product.
@@ -334,10 +446,14 @@
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity HDRP</b> with <b>Blender</b>, <b>InputSystem</b>, and <b>ShaderGraph</b></li>
-                        <li class="mb-2"> > First-person physics-based puzzle-solving levels with unique puzzle gimmicks and an extensible puzzle development system.</li>
+                        <li class="mb-2"> > Made in <b>Unity HDRP</b> with <b>Blender</b>, <b>InputSystem</b>, and
+                            <b>ShaderGraph</b>
+                        </li>
+                        <li class="mb-2"> > First-person physics-based puzzle-solving levels with unique puzzle gimmicks
+                            and an extensible puzzle development system.</li>
                         <li class="mb-2"> > Utilized overlay cameras to produce user HUD.</li>
-                        <li class="mb-2"> > Custom-wrote a non-kinematic rigidbody player controller driven by a state machine.</li>
+                        <li class="mb-2"> > Custom-wrote a non-kinematic rigidbody player controller driven by a state
+                            machine.</li>
                     </ul>
 
                 </div>
@@ -346,7 +462,7 @@
             <!--Java Journal-->
             <div id="CS 5" class="fade pop-element entry centered-box-container">
                 <div class="centered-box-content flex flex-col items-center">
-                    
+
                     <div class="flex flex-row items-center expand-flex-row">
                         <h1 class="text-3xl font-bold mb-4">
                             CS | Java Journal
@@ -360,19 +476,26 @@
                         </video>
 
                         <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/journal/PA05.jpg" alt="uml" class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/journal/GUIScreenshot3.png" alt="gui-example2" class="pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <img src="/assets/journal/PA05.jpg" alt="uml" class="pop-element lightboxable-image"
+                                onclick="openLightbox(this)">
+                            <img src="/assets/journal/GUIScreenshot3.png" alt="gui-example2"
+                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
 
                     <p style="font-size: medium;" class="mt-2">
-                        The final project for our <b>Object-Oriented Design</b> class. With two other students, we made a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to create an easily extensible codebase with modular implementations that would be compounded upon with further iterations of the assignment. One of the lightbox images includes the UML diagram we made for the code layout of our project.
+                        The final project for our <b>Object-Oriented Design</b> class. With two other students, we made
+                        a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to create
+                        an easily extensible codebase with modular implementations that would be compounded upon with
+                        further iterations of the assignment. One of the lightbox images includes the UML diagram we
+                        made for the code layout of our project.
                     </p>
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
                         <li class="mb-2"> > Used <b>Java</b>, <b>JavaFX</b>, <b>git</b>, and <b>Gradle</b>.</li>
-                        <li class="mb-2"> > Implemented File I/O with password locks, custom dialogue boxes, FXML-based UI design, and unit-tested models/controllers.</li>
+                        <li class="mb-2"> > Implemented File I/O with password locks, custom dialogue boxes, FXML-based
+                            UI design, and unit-tested models/controllers.</li>
                     </ul>
 
                 </div>
@@ -395,6 +518,7 @@
     </div>
 
     <script src="scripting.js"></script>
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
