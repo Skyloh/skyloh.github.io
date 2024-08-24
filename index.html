@@ -23,7 +23,7 @@
             <button id="modeToggle" class="my-2">
                 <img src="/assets/sun.png" alt="DarkMode" width="45" class="toggle-invert">
             </button>
-            
+
         </div>
 
         <!-- Header -->
@@ -208,14 +208,46 @@
                                 class="pop-element lightboxable-image" onclick="openLightbox(this)">
                         </div>
                     </div>
+                    <!--Accordian (pd)-->
+                    <div data-accordion="open" class="flex flex-col expand-flex-row my-2"
+                        data-active-classes="dark:text-amber-500">
+                        <h2 id="accordion-heading-1pd">
+                            <button type="button" data-accordion-target="#accordion-body-1pd" aria-expanded="false"
+                                aria-controls="accordion-body-1pd">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > <b>Project Description</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1pd" class="hidden my-2" aria-labelledby="accordion-heading-1pd">
+                            <p style="font-size: medium;" class="mt-2">
+                                A solo personal project puzzle game about matching Dall-E generated pictures to their
+                                original
+                                prompts. The main goal of the project was to finish and polish a project completely.
+                                Some
+                                sub-goals were creating an easily-approachable game, extensible dialogue system, dynamic
+                                and
+                                interesting NPCs, and variable levels of win conditions rather than a cut-and-dry
+                                right-or-wrong
+                                puzzle system.
+                            </p>
+                        </div>
 
-                    <p style="font-size: medium;" class="mt-2">
-                        A solo personal project puzzle game about matching Dall-E generated pictures to their original
-                        prompts. The main goal of the project was to finish and polish a project completely. Some
-                        sub-goals were creating an easily-approachable game, extensible dialogue system, dynamic and
-                        interesting NPCs, and variable levels of win conditions rather than a cut-and-dry right-or-wrong
-                        puzzle system.
-                    </p>
+                        <h2 id="accordion-heading-2pd">
+                            <button type="button" data-accordion-target="#accordion-body-2pd" aria-expanded="false"
+                                aria-controls="accordion-body-2pd">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Made in <b>Unity</b> with
+                                    <b>Blender</b> and <b>Maya</b>.</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2pd" class="hidden my-2" aria-labelledby="accordion-heading-2pd">
+                            <p>
+                                This project was made in Unity 2019, using Blender for modeling and animation with Maya
+                                as an animation touch-up and ASCII fbx exporter.
+                            </p>
+                        </div>
+                    </div>
+
 
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
@@ -265,61 +297,77 @@
                             </button>
                         </h2>
                         <div id="accordion-body-1wr" class="hidden my-2" aria-labelledby="accordion-heading-1wr">
-                            <p>
-                            A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio
-                            environment with 40 other students, I continued work on a student-led project. I primarily
-                            contributed to the codebase with custom utility tools (e.g. facilitating puzzle design with
-                            line
-                            rendering utilities) and refactoring of old student code, but I also worked on writing and
-                            implementing dialogue through the external <b>Inky</b> application. I worked in a small team
-                            with 6 other interdisciplinary students in which we would create weekly tasks, following the
-                            <b>Agile</b> workflow with <b>Jira</b>.
+                            <p style="font-size: medium;">
+                                A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio
+                                environment with 40 other students, I continued work on a student-led project. I
+                                primarily
+                                contributed to the codebase with custom utility tools (e.g. facilitating puzzle design
+                                with
+                                line
+                                rendering utilities) and refactoring of old student code, but I also worked on writing
+                                and
+                                implementing dialogue through the external <b>Inky</b> application. I worked in a small
+                                team
+                                with 6 other interdisciplinary students in which we would create weekly tasks, following
+                                the
+                                <b>Agile</b> workflow with <b>Jira</b>.
                             </p>
                         </div>
 
                         <h2 id="accordion-heading-2wr">
                             <button type="button" data-accordion-target="#accordion-body-2wr" aria-expanded="false"
                                 aria-controls="accordion-body-2wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Made in <b>Unity</b> with <b>Inky</b>.</b>
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Made in <b>Unity</b> with
+                                    <b>Inky</b>.</b>
                                 </h4>
                             </button>
                         </h2>
                         <div id="accordion-body-2wr" class="hidden my-2" aria-labelledby="accordion-heading-2wr">
                             <p>
-                            This game was developed in the Unity engine. The main software I used aside from that is <b>Inky</b>, a narrative
-                            tool that has a Unity plugin. Some of my work was adapting dialogue to this plugin, as well as bugfixing
-                            implementation details and creating how-to guides for the dialogue writers.
+                                This game was developed in the Unity engine. The main software I used aside from that is
+                                <b>Inky</b>, a narrative
+                                tool that has a Unity plugin. Some of my work was adapting dialogue to this plugin, as
+                                well as bugfixing
+                                implementation details and creating how-to guides for the dialogue writers.
                             </p>
                         </div>
 
                         <h2 id="accordion-heading-3wr">
                             <button type="button" data-accordion-target="#accordion-body-3wr" aria-expanded="false"
                                 aria-controls="accordion-body-3wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Used <b>git</b>, <b>Github Desktop</b>, and <b>Jira</b>.</b>
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Used <b>git</b>, <b>Github
+                                        Desktop</b>, and <b>Jira</b>.</b>
                                 </h4>
                             </button>
                         </h2>
                         <div id="accordion-body-3wr" class="hidden my-2" aria-labelledby="accordion-heading-3wr">
                             <p>
-                                For this project, we used <b>git and Github Desktop</b> for source control, operating on sprint-branches to maintain a clean
-                                working tree with a stable build at all times. Additionally, to support the mock studio environment, we used <b>Jira</b> to delegate
-                                and organize tasks with the story point system. We would also have scrums with our designated groups and disciplines.
+                                For this project, we used <b>git and Github Desktop</b> for source control, operating on
+                                sprint-branches to maintain a clean
+                                working tree with a stable build at all times. Additionally, to support the mock studio
+                                environment, we used <b>Jira</b> to delegate
+                                and organize tasks with the story point system. We would also have scrums with our
+                                designated groups and disciplines.
                             </p>
                         </div>
 
                         <h2 id="accordion-heading-4wr">
                             <button type="button" data-accordion-target="#accordion-body-4wr" aria-expanded="false"
                                 aria-controls="accordion-body-4wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Refactored moving-element implementation to generalize
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Refactored moving-element
+                                    implementation to generalize
                                     behavior.</b>
                                 </h4>
                             </button>
                         </h2>
                         <div id="accordion-body-4wr" class="hidden my-2" aria-labelledby="accordion-heading-4wr">
                             <p>
-                                The original code for moving elements such as platforms was hard-coded to only allow two points of movement, and ONLY platforms
-                                could move. This was pretty limiting, so I redesigned the moving element system to be a generic component that allowed for multiple
-                                anchor points to traverse between, accessible in the editor. Additionally, I added different wrapping types so designers could
+                                The original code for moving elements such as platforms was hard-coded to only allow two
+                                points of movement, and ONLY platforms
+                                could move. This was pretty limiting, so I redesigned the moving element system to be a
+                                generic component that allowed for multiple
+                                anchor points to traverse between, accessible in the editor. Additionally, I added
+                                different wrapping types so designers could
                                 easily change the movement, behavior, and start position of platforms.
                             </p>
                         </div>
@@ -327,16 +375,21 @@
                         <h2 id="accordion-heading-5wr">
                             <button type="button" data-accordion-target="#accordion-body-5wr" aria-expanded="false"
                                 aria-controls="accordion-body-5wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Implemented <b>custom utility tools</b> for level designers.</b>
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Implemented <b>custom
+                                        utility tools</b> for level designers.</b>
                                 </h4>
                             </button>
                         </h2>
                         <div id="accordion-body-5wr" class="hidden my-2" aria-labelledby="accordion-heading-5wr">
                             <p>
-                                In order to help level designers in the creation of "power lines" to represent energy flowing in our puzzle system, I created an
-                                editor script tool that would use the line renderer component to generate a prefab with the baked line mesh between a set of points.
-                                The line generation used a custom-written pathfinding algorithm and supported several creative parameters. I also created guides to use
-                                for this tool as well as the dialogue implementation pipeline for artists and dialogue writers.
+                                In order to help level designers in the creation of "power lines" to represent energy
+                                flowing in our puzzle system, I created an
+                                editor script tool that would use the line renderer component to generate a prefab with
+                                the baked line mesh between a set of points.
+                                The line generation used a custom-written pathfinding algorithm and supported several
+                                creative parameters. I also created guides to use
+                                for this tool as well as the dialogue implementation pipeline for artists and dialogue
+                                writers.
                             </p>
                         </div>
                     </div>
