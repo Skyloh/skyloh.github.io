@@ -243,22 +243,44 @@
                         <div id="accordion-body-2pd" class="hidden my-2" aria-labelledby="accordion-heading-2pd">
                             <p>
                                 This project was made in Unity 2019, using Blender for modeling and animation with Maya
-                                as an animation touch-up and ASCII fbx exporter.
+                                as an animation touch-up and ASCII fbx exporter. All assets aside from the AI art were self-made.
+                                The art itself was generated with Dall-E.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-3pd">
+                            <button type="button" data-accordion-target="#accordion-body-3pd" aria-expanded="false"
+                                aria-controls="accordion-body-3pd">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">
+                                    > Created NPCs with <b>Navmesh</b>, <b>ShapeKeys</b>, and <b>Rigging</b> constraints
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3pd" class="hidden my-2" aria-labelledby="accordion-heading-3pd">
+                            <p>
+                                In order to bring the (simple) characters to life, I programmed collision-avoidant roaming behaviors
+                                for the NPCs using the Navmesh component just to pathfind rather than pathfind AND traverse. Additionally,
+                                I gave the models shapekeys for various emotions to incorporate in their dialogue boxes. The models also had
+                                Rigging multi-aim constraints so that the NPCs could look at objects in the scene as they passed by.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-4pd">
+                            <button type="button" data-accordion-target="#accordion-body-4pd" aria-expanded="false"
+                                aria-controls="accordion-body-4pd">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">
+                                    > Built custom <b>dialogue system</b> with dialogue-world events
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4pd" class="hidden my-2" aria-labelledby="accordion-heading-4pd">
+                            <p>
+                                It wasn't really necessary for the game's mechanic, but I wanted cheeky NPCs, so I made a dialogue system.
+                                As one does. It was a fully-custom made system that allowed for variable text speeds, in-editor dialogue editing,
+                                and easily-extensible world-events during dialogue, such as animations, flag triggers, gameobject toggles, etc.
                             </p>
                         </div>
                     </div>
-
-
-                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
-                    <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity</b> with <b>Blender</b> and <b>Maya</b></li>
-                        <li class="mb-2"> > All assets custom-made, including models, animations, scripts, and images
-                            (paintings AI-generated)</li>
-                        <li class="mb-2"> > Programmed NPCs with <b>Navmesh</b> collision-avoidance roaming behaviors
-                            and custom animations with ShapeKeys and dynamic <b>Rigging</b> multi-aim constraints</li>
-                        <li class="mb-2"> > Built custom <b>dialogue system</b> with variable text speed and
-                            dialogue-world events</li>
-                    </ul>
 
                 </div>
             </div>

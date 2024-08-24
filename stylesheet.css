@@ -1518,11 +1518,6 @@ input:checked + .toggle-bg {
   line-height: 2.25rem;
 }
 
-.text-amber-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 191 36 / var(--tw-text-opacity));
-}
-
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
@@ -1855,11 +1850,6 @@ h3, a, p {
 .focus\:ring-gray-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
-}
-
-.grouparia-expanded='true' .group-\[aria-expanded\=\'true\'\]\:text-amber-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 191 36 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:border-blue-500) {
