@@ -243,7 +243,8 @@
                         <div id="accordion-body-2pd" class="hidden my-2" aria-labelledby="accordion-heading-2pd">
                             <p>
                                 This project was made in Unity 2019, using Blender for modeling and animation with Maya
-                                as an animation touch-up and ASCII fbx exporter. All assets aside from the AI art were self-made.
+                                as an animation touch-up and ASCII fbx exporter. All assets aside from the AI art were
+                                self-made.
                                 The art itself was generated with Dall-E.
                             </p>
                         </div>
@@ -258,10 +259,14 @@
                         </h2>
                         <div id="accordion-body-3pd" class="hidden my-2" aria-labelledby="accordion-heading-3pd">
                             <p>
-                                In order to bring the (simple) characters to life, I programmed collision-avoidant roaming behaviors
-                                for the NPCs using the Navmesh component just to pathfind rather than pathfind AND traverse. Additionally,
-                                I gave the models shapekeys for various emotions to incorporate in their dialogue boxes. The models also had
-                                Rigging multi-aim constraints so that the NPCs could look at objects in the scene as they passed by.
+                                In order to bring the (simple) characters to life, I programmed collision-avoidant
+                                roaming behaviors
+                                for the NPCs using the Navmesh component just to pathfind rather than pathfind AND
+                                traverse. Additionally,
+                                I gave the models shapekeys for various emotions to incorporate in their dialogue boxes.
+                                The models also had
+                                Rigging multi-aim constraints so that the NPCs could look at objects in the scene as
+                                they passed by.
                             </p>
                         </div>
 
@@ -275,9 +280,12 @@
                         </h2>
                         <div id="accordion-body-4pd" class="hidden my-2" aria-labelledby="accordion-heading-4pd">
                             <p>
-                                It wasn't really necessary for the game's mechanic, but I wanted cheeky NPCs, so I made a dialogue system.
-                                As one does. It was a fully-custom made system that allowed for variable text speeds, in-editor dialogue editing,
-                                and easily-extensible world-events during dialogue, such as animations, flag triggers, gameobject toggles, etc.
+                                It wasn't really necessary for the game's mechanic, but I wanted cheeky NPCs, so I made
+                                a dialogue system.
+                                As one does. It was a fully-custom made system that allowed for variable text speeds,
+                                in-editor dialogue editing,
+                                and easily-extensible world-events during dialogue, such as animations, flag triggers,
+                                gameobject toggles, etc.
                             </p>
                         </div>
                     </div>
@@ -546,30 +554,70 @@
                         </video>
                     </div>
 
+                    <!--Accordian (sc)-->
+                    <div data-accordion="open" class="flex flex-col expand-flex-row my-2"
+                        data-active-classes="dark:text-amber-500">
+                        <h2 id="accordion-heading-1sc">
+                            <button type="button" data-accordion-target="#accordion-body-1sc" aria-expanded="false"
+                                aria-controls="accordion-body-1sc">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > <b>Project Description</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1sc" class="hidden my-2" aria-labelledby="accordion-heading-1sc">
+                            <p style="font-size: medium;" class="mt-2">
+                                A short summer project where I challenged myself to create a non-kinematic
+                                state-machine-based
+                                character controller that was different from the standard implementation in two ways:
+                            <ol>
+                                <li>1 - The state machine was composition-based, meaning states could be pulled in and
+                                    out
+                                    of
+                                    the state machine willy-nilly at runtime with no adverse/unpredicatable effects.
+                                </li>
+                                <li>2 - The player used a floating-capsule implementation as opposed to the
+                                    ground-contact
+                                    capsule implementation which often had implementation quirks with stairs or
+                                    elevation.
+                                </li>
+                            </ol>
+                            </p>
+                        </div>
 
-                    <p style="font-size: medium;" class="mt-2">
-                        A short summer project where I challenged myself to create a non-kinematic state-machine-based
-                        character controller that was different from the standard implementation in two ways:
-                    <ol>
-                        <li>1 - The state machine was composition-based, meaning states could be pulled in and out of
-                            the state machine willy-nilly at runtime with no adverse/unpredicatable effects.</li>
-                        <li>2 - The player used a floating-capsule implementation as opposed to the ground-contact
-                            capsule implementation which often had implementation quirks with stairs or elevation.</li>
-                    </ol>
-                    </p>
+                        <h2 id="accordion-heading-3sc">
+                            <button type="button" data-accordion-target="#accordion-body-3sc" aria-expanded="false"
+                                aria-controls="accordion-body-3sc">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">> Made in <b>Unity</b> with animations sourced from <b>Mixamo</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3sc" class="hidden my-2" aria-labelledby="accordion-heading-3sc">
+                            <p class="mt-2">
+                                This was a Unity project in which I used a model from player
+                                model from the
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:medium"
+                                    href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity
+                                        Asset Store</u></a> and a bunch of pre-packed Mixamo animations. This was to cut down on the time I spent
+                                        working on the animations so that I could focus on the technical side of things.
+                            </p>
+                        </div>
 
-                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
-                    <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity</b> with animations sourced from <b>Mixamo</b> and player
-                            model from the
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:medium"
-                                href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity
-                                    Asset Store</u></a>
-                        </li>
-                        <li class="mb-2"> > <b>Composition-based non-kinematic</b> player controller with a <b>floating
-                                collider</b> implementation, stair-slope handling, and other polishes.</li>
-                    </ul>
-
+                        <h2 id="accordion-heading-2sc">
+                            <button type="button" data-accordion-target="#accordion-body-2sc" aria-expanded="false"
+                                aria-controls="accordion-body-2sc">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Created a <b>Composition non-kinematic</b> floating-collider CC
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2sc" class="hidden my-2" aria-labelledby="accordion-heading-2sc">
+                            <p class="mt-2">
+                                As was the main goal of the project, I created a non-kinematic character controller that used the floating-collider
+                                implementation to avoid the quirks of stairs and slopes. Additionally, I made the controller a monobehavior composition-based 
+                                state machine so that states could be added and removed at runtime. I was met with a lot of difficulties about execution order and
+                                "assessing" information about the world, but it was a fun challenge. There are a lot of parameters to tweak for this implementation, too.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -600,10 +648,13 @@
 
 
                     <p style="font-size: medium;" class="mt-2">
-                        The end result of my senior project. My goal was to create a small, polish, proof-of-concept for
+                        The end result of my senior project. My goal was to create a small, polish, proof-of-concept
+                        for
                         a puzzle game all about attraction and repulsion. To do this, I learned new tools like
-                        ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and modular
-                        OoD in order to create game mechanics like my reusable puzzle system and the gravitational-pull
+                        ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and
+                        modular
+                        OoD in order to create game mechanics like my reusable puzzle system and the
+                        gravitational-pull
                         system. The latter allowed me to extend the game's original mechanic to affect the player as
                         well, which I was pleasantly surprised by.
                     </p>
@@ -625,10 +676,12 @@
                         <li class="mb-2"> > Made in <b>Unity HDRP</b> with <b>Blender</b>, <b>InputSystem</b>, and
                             <b>ShaderGraph</b>
                         </li>
-                        <li class="mb-2"> > First-person physics-based puzzle-solving levels with unique puzzle gimmicks
+                        <li class="mb-2"> > First-person physics-based puzzle-solving levels with unique puzzle
+                            gimmicks
                             and an extensible puzzle development system.</li>
                         <li class="mb-2"> > Utilized overlay cameras to produce user HUD.</li>
-                        <li class="mb-2"> > Custom-wrote a non-kinematic rigidbody player controller driven by a state
+                        <li class="mb-2"> > Custom-wrote a non-kinematic rigidbody player controller driven by a
+                            state
                             machine.</li>
                     </ul>
 
@@ -660,9 +713,12 @@
                     </div>
 
                     <p style="font-size: medium;" class="mt-2">
-                        The final project for our <b>Object-Oriented Design</b> class. With two other students, we made
-                        a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to create
-                        an easily extensible codebase with modular implementations that would be compounded upon with
+                        The final project for our <b>Object-Oriented Design</b> class. With two other students, we
+                        made
+                        a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to
+                        create
+                        an easily extensible codebase with modular implementations that would be compounded upon
+                        with
                         further iterations of the assignment. One of the lightbox images includes the UML diagram we
                         made for the code layout of our project.
                     </p>
@@ -670,7 +726,8 @@
                     <h1 class="mt-4 font-bold">- Features and Tools -</h1>
                     <ul class="flex flex-col items">
                         <li class="mb-2"> > Used <b>Java</b>, <b>JavaFX</b>, <b>git</b>, and <b>Gradle</b>.</li>
-                        <li class="mb-2"> > Implemented File I/O with password locks, custom dialogue boxes, FXML-based
+                        <li class="mb-2"> > Implemented File I/O with password locks, custom dialogue boxes,
+                            FXML-based
                             UI design, and unit-tested models/controllers.</li>
                     </ul>
 
