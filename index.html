@@ -17,9 +17,8 @@
         </div>
 
         <div class="flex flex-row items-center justify-center">
-            <!--WIP NOTIF-->
-            <h4 class="text-3xl">---WIP UNDER CONSTRUCTION WIP----</h4>
-
+            <!--WIP NOTIF <h4 class="text-3xl">---WIP UNDER CONSTRUCTION WIP----</h4>-->
+            
             <button id="modeToggle" class="my-2">
                 <img src="/assets/sun.png" alt="DarkMode" width="45" class="toggle-invert">
             </button>
@@ -127,19 +126,77 @@
 
                     <h1 class="mt-2">click tabs below for more information</h1>
 
-                    <!--Accordian (pb)-->
+                    <!--Accordian (oc)-->
                     <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
                         data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1pb">
-                            <button type="button" data-accordion-target="#accordion-body-1pb" aria-expanded="false"
-                                aria-controls="accordion-body-1pb">
+                        <h2 id="accordion-heading-1oc">
+                            <button type="button" data-accordion-target="#accordion-body-1oc" aria-expanded="false"
+                                aria-controls="accordion-body-1oc">
                                 <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > <b>Project Description</b>
                                 </h4>
                             </button>
                         </h2>
-                        <div id="accordion-body-1pb" class="hidden my-2" aria-labelledby="accordion-heading-1pb">
+                        <div id="accordion-body-1oc" class="hidden my-2" aria-labelledby="accordion-heading-1oc">
                             <p style="font-size: medium;">
-                                TODO
+                                This project was the end result of a portion of my study abroad trip to Poland. Together 
+                                with 13 other students from Northeastern, we worked with around 28 students from the 
+                                Polish-Japanese Academy of Information Technology to develop games from game jam concepts 
+                                centering on topics of Polish historical or cultural significance. My team was a collective 
+                                group of 10 students split across the programming, art, and music disciplines. Together, we 
+                                overhauled the game jam concept and developed Oil City in Unity, a city-builder factory game in line 
+                                with Factorio where you must maintain the Polish oil industry through its historical hardships 
+                                and global triumphs. 
+                                <br><br>
+                                In this project, I took on the role of a programmer and game designer. The main thing I contributed
+                                to the project was the implementation of the pipe system and time manager.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-2oc">
+                            <button type="button" data-accordion-target="#accordion-body-2oc" aria-expanded="false"
+                                aria-controls="accordion-body-2oc">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Created a core tree-based game-tick manager script
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2oc" class="hidden my-2" aria-labelledby="accordion-heading-2oc">
+                            <p>
+                                In order for the game to function, there needed to be some system in charge of delegating game ticks to objects that 
+                                needed them. This included various time-related managers such as the TimelineManager, in addition to the main mechanic
+                                of the game: oil flow. To create a generalized tool, I made a TimeManager script that would store its registered objects
+                                in a forest list; the roots of the trees being the only gameobjects to receive the ticks. For objects like the Woodcutter's house,
+                                it would remain in the list as a singleton tree. For things like the Train Station (often the root of the oil system), it would
+                                receive the tick, then recurse down its members to pass the invocation on to them as well. This kept every system deterministic in 
+                                their execution order (i.e. in an oil system, the consumer wouldn't somehow go before the producer), which made the game easy to debug
+                                and play.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-3oc">
+                            <button type="button" data-accordion-target="#accordion-body-3oc" aria-expanded="false"
+                                aria-controls="accordion-body-3oc">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Developed a robust system for pipes
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3oc" class="hidden my-2" aria-labelledby="accordion-heading-3oc">
+                            <p>
+                                I was in charge of making the pipes, a crucial part of the game. To best fit with the requests of players and QA testers, I had
+                                to rework the system's implementation to allow for different types of connections alongside ambiguous connections and temporarily invalid
+                                connections. Pipes had to flow between two Flowable structures (a building or another pipe), maintain a valid connection between
+                                said structures (i.e. flowing from a valid direction into a valid direction and containing the expected fluid type of either Kerosene or Oil 
+                                for that kind of connection), and possess the ability to be "flipped" on demand in case a player made a mistake in placing them down.
+
+                                <br><br>
+                                This was a complicated mechanic that gave me a bit of trouble. The problems I had mainly revolved around pipes of zero or one length (created by
+                                connecting to adjacent pipes), and creating understandable syntax for documenting the obscure problems that popped up. The former proved to create
+                                a lot of issues due to my definiton of pipes have a left/right-hand side endpoints. A singleton pipe had the two positions be the exact same, meaning
+                                that a further distinction with pipe flow direction AT those endpoints was necessary, from which made it determinable what tile the singleton pipe was
+                                flowing in to or out from.
+
+                                <br><br>In retrospect, a lookup table of tile positions to Flowable objects would've been a better approach for this 
+                                system rather than a hard-coded tree as it would've made the coupling/decoupling issues trivial to solve, if only 
+                                a bit more tedious to access.
                             </p>
                         </div>
                     </div>
