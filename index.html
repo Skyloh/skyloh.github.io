@@ -152,33 +152,124 @@
                         </div>
                     </div>
 
-                    <p style="font-size: medium;" class="mt-2">
-                        A <b>solo personal project (WIP)</b> in which I challenged myself to create a modular
-                        fighting-game framework. The main focus of this was particularly on the structural challenge of
-                        designing asset code structures that are easy for designers to create stuff with, but also
-                        powerful in their modularity. I evaluated several approaches to implementing move data, but
-                        settled with Scriptable Objects and repurposing Unity’s Mechanim State Machine Animation States.
-                        <br>
-                        <br>
-                        I used ripped sprites from <i>Scott Pilgrim VS The World: The Game</i> so I could focus on the
-                        programming. Every script is custom-written in Unity, with the only package being InputSystem.
-                    </p>
+                    <h1 class="mt-2">click tabs below for more information</h1>
 
-                    <h1 class="mt-4 font-bold">- Features and Tools -</h1>
-                    <ul class="flex flex-col items">
-                        <li class="mb-2"> > Made in <b>Unity</b> with <b>InputSystem Package</b></li>
-                        <li class="mb-2"> > Utilized custom-written <b>Python</b> sprite splicing script to facilitate
-                            animation importing</li>
-                        <li class="mb-2"> > Wrote custom <b>input-buffering data structure</b> with a
-                            <b>binary-insertion algorithm</b>
-                        </li>
-                        <li class="mb-2"> > Implemented <b>animation scrubber</b> for easier debug viewing of hitboxes
-                            and parameters</li>
-                        <li class="mb-2"> > Developed a modular "Track" and "Sequence" data storage system
-                            <b>independant of AnimationClips</b> without AnimationEvents
-                        </li>
-                    </ul>
+                    <!--Accordian (pb)-->
+                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
+                        data-active-classes="dark:text-amber-500">
+                        <h2 id="accordion-heading-1pb">
+                            <button type="button" data-accordion-target="#accordion-body-1pb" aria-expanded="false"
+                                aria-controls="accordion-body-1pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > <b>Project Description</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-1pb" class="hidden my-2" aria-labelledby="accordion-heading-1pb">
+                            <p style="font-size: medium;">
+                                A <b>solo personal project (WIP)</b> in which I challenged myself to create a modular
+                                fighting-game framework. The main focus of this was particularly on the structural challenge of
+                                designing asset code structures that are easy for designers to create stuff with, but also
+                                powerful in their modularity. I evaluated several approaches to implementing move data, but
+                                settled with Scriptable Objects and repurposing Unity’s Mechanim State Machine Animation States.
+                                <br>
+                                <br>
+                                I used ripped sprites from <i>Scott Pilgrim VS The World: The Game</i> so I could focus on the
+                                programming. Every script is custom-written in Unity, with the only package being InputSystem.
+                            </p>
+                        </div>
 
+                        <h2 id="accordion-heading-2pb">
+                            <button type="button" data-accordion-target="#accordion-body-2pb" aria-expanded="false"
+                                aria-controls="accordion-body-2pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Made in <b>Unity</b> with <b>InputSystem Package</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2pb" class="hidden my-2" aria-labelledby="accordion-heading-2pb">
+                            <p>
+                                This project is being made in Unity, with the only package currently in use being the InputSystem package. I chose
+                                this package because I wanted to have a non-programmatical coupling between input and behaviors. With InputSystem's 
+                                serializable unityevents for input, this was a clear choice.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-2pb">
+                            <button type="button" data-accordion-target="#accordion-body-2pb" aria-expanded="false"
+                                aria-controls="accordion-body-2pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">> Wrote custom <b>input-buffer</b> with a
+                                    <b>binary-insertion algorithm</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-2pb" class="hidden my-2" aria-labelledby="accordion-heading-2pb">
+                            <p>
+                                In order to achieve a smooth gameplay feel, I wrote my own input-buffering system to prevent buttons from being lost and
+                                to allow players to input actions during the downtime of another. This buffer used two lists in parallel to keep track of 
+                                input history and decay period before expiration, using binary insertion to add inputs quickly to the lists. I didn't use
+                                a priority queue for the input histories based on the decay time left because the queue would need to reorganize itself
+                                often. Additionally, the queue would need to remove items that may not be at the front in the event of an input expiration.
+                                This would've gotten messy, so I stuck with two paired lists and the invariant that they were related by index.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-3pb">
+                            <button type="button" data-accordion-target="#accordion-body-3pb" aria-expanded="false"
+                                aria-controls="accordion-body-3pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Utilized custom-written <b>Python</b> sprite splicing script for anims
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-3pb" class="hidden my-2" aria-labelledby="accordion-heading-3pb">
+                            <p>
+                                As mentioned in the project description, I used sprites ripped from a game in order to develop the framework. These sprites were organized on
+                                a sprite sheet in uneven columns and rows, making the slicing very difficult. To circumvent the time required to take manual screenshots of each frame,
+                                I wrote a python script to detect and flood-fill individual sprites, writing the data to separate image files. This allowed me to drastically cut down on the 
+                                time required to set up the art.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-4pb">
+                            <button type="button" data-accordion-target="#accordion-body-4pb" aria-expanded="false"
+                                aria-controls="accordion-body-4pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Developed data storage system
+                                    <b>independant of Clips</b>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4pb" class="hidden my-2" aria-labelledby="accordion-heading-4pb">
+                            <p>
+                                When designing this kind of game, I had considered using AnimationEvents in the past as a means of
+                                storing information for callbacks and triggering functions. However, this would prove to be a bad design choice
+                                as the information was hard-coded into animation clips, making them impossible to reuse without copying the 
+                                stored information. Additionally, the animation event system uses reflection to activate callbacks, a practice
+                                which scales poorly when lots of components or children are in the object's hierarchy.
+                                <br> <br>
+                                To fix this, I used a SO design of "Tracks" with "Sequences". Sequences contained Tracks which contained KVpairs
+                                of frame timestaps paired with a generic value. A hitbox sequence for example would have hitbox data at certain frames,
+                                indicating that at the given frame timestamp, that hitbox should appear. In order to run a Sequence, I used Unity's Mechanim
+                                State Machine monobehavior base script as a sort of launching point. Animation states would have their respective clips for certain
+                                attacks, but would all use the same state script. This state script was in charge of executing the attack's respective SequenceSO, running
+                                through every Track with every Animator update.
+                            </p>
+                        </div>
+
+                        <h2 id="accordion-heading-4pb">
+                            <button type="button" data-accordion-target="#accordion-body-4pb" aria-expanded="false"
+                                aria-controls="accordion-body-4pb">
+                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> > Implemented <b>animation scrubber</b> for debug viewing of data
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="accordion-body-4pb" class="hidden my-2" aria-labelledby="accordion-heading-4pb">
+                            <p>
+                                To help with the development of Tracks and Sequences, I created a dev scene in Unity to "scrub" through an animation and its Sequence.
+                                This would play back the animation and Sequence in parallel, sending the event invocations from the Sequence to debug mocks of the same
+                                components, which would report the information to the console or draw things in the scene to represent the gathered data.
+                                <br> This was very helpful in cutting down the amount of time I spent wading through code and SOs for bugfixing, and I think
+                                it looks pretty neat.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
