@@ -48,24 +48,21 @@ h3, a, p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 1rem;
 }
 
 .centered-box-content{
     background-color:rgb(236, 236, 236);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 15px 6px rgb(133, 133, 133);
-    width: 45rem;
 }
 
 .dark .centered-box-content {
     background-color:#464646;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0px 15px 6px rgba(29, 29, 29, 0.76);
-    width: 45rem;
 }
 
 .accordion-box {
@@ -109,14 +106,14 @@ h3, a, p {
     border-color: #FFBF00; 
     border-style: outset;
 }
-
+/*
 .tab-content {
     display: none;
 }
 
 .tab-content.active {
     display: block;
-}
+}*/
 
 .dark .toggle-invert {
     filter:invert(1);
@@ -142,11 +139,24 @@ h3, a, p {
 }
 
 .pop-element:hover {
-    transform: scale(1.1);
+    transform: scale(1.025);
 }
 
 .pop-marker {
     transform: scale(1);
+}
+
+.color-element {
+    transform-origin: center;
+    transition: background-color 0.1s ease-in;
+}
+
+.color-element:hover {
+    background-color: #535353;
+}
+
+.color-marker {
+    background-color: #464646;
 }
 
 .lightboxable-image {

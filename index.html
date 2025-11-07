@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -8,1049 +8,410 @@
 </head>
 
 <body class="dark">
+    <header class="fixed top-0 w-full shadow-md z-50" style="background-color: #2f3030;">
+        <div class="mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between">
+                <div class="text-xl font-bold cursor-pointer hover:text-amber-500" onclick="window.location.href='index.html'">Nathan Gooneratne</div>
+                <div class="space-x-4">
+                    <a href="index.html#about" class="hover:text-amber-500">About</a>
+                    <a href="index.html#projects" class="hover:text-amber-500">Projects</a>
+                    <a href="index.html#contact" class="hover:text-amber-500">Contact/Socials</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="min-h-screen flex flex-col-reverse lg:flex-row">
+        <!-- About Half -->
+        <div class="flex-1 p-8 flex flex-col justify-center items-center" style="background-color: #2f3030;" id="about">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p>My name is Nathan Gooneratne, and I <b><i>love</i></b> making videogames.
+                <br><br>Playing them is amazing too, don’t get me wrong, but I find myself quite at home plugging away at the backend of whatever project I’m grinding out. <b>Game mechanics programming, technical art, and tools development</b> are my passions within my passion, and I strive to find chances to develop my skills for them whenever I can!
+                <br><br>When I’m not programming, I’m a hobby artist and writer. Few things bring greater joy than bringing characters and stories to life through drawing, modeling, animating, the works. Rigging NPCs in-engine constantly reminds me why I’m so gravitated towards this craft, and it never gets old.
+                <br><br>This website has some highlighted projects I’ve made (or am making) the past few years, be it personal, academic, or industry. There’s plenty more than are listed here, but no worries. I value your time.
+</p>
+        </div>
+
+        <!-- Video Half -->
+        <div class="relative flex-1 overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="assets/trailer.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
+
+    </div>
+
+    <!-- TEST PADDING 
+    <p style="height: 200vh;">
+        Some scroll padding...
+    </p>
+    -->
+
     <!-- Main Container -->
-    <div class="container mx-auto max-w-screen-lg">
-
-        <div id="lightbox" class="lightbox">
-            <h1 class="close" onclick="closeLightbox()">X</h1>
-            <img src="" alt="Lightbox Image" id="lightboxImage" class="lightbox-content">
+    <div class="mx-auto max-w-screen py-3">
+        <!-- Projects Header -->
+        <div class="flex flex-col items-center justify-center"
+            style="background-color:#5f5f5f; padding:1rem; margin-bottom: 2rem">
+            <h1 id="projects" class="text-3xl">
+                Projects
+            </h1>
         </div>
 
-        <div class="flex flex-row items-center justify-center">
-            <!--WIP NOTIF <h4 class="text-3xl">---WIP UNDER CONSTRUCTION WIP----</h4>-->
-            
-            <button id="modeToggle" class="my-2">
-                <img src="/assets/sun.png" alt="DarkMode" width="45" class="toggle-invert">
-            </button>
+        <!-- Box Col -->
+        <div class="flex flex-col" style="margin-left: 6rem; margin-right: 6rem;">
+            <!-- Box Row: flexes as row when above 48 rem, flexes as col for mobile and tablets -->
+            <div class="flex flex-col [@media(min-width:1050px)]:flex-row flex-1 items-start justify-center">
 
-        </div>
+                <div class="fade flex-1 centered-box-container"> <!-- TEMPORARY REMOVED 'pop-element' SEE BELOW-->
 
-        <!-- Header -->
-        <div class="flex items-center justify-center" style="min-height: 25vh;">
+                    <!-- TEMPORARY, SEE BELOW -->
+                    <div class="centered-box-content color-element, flex flex-col items-center">
 
-            <div class="flex flex-row header-box">
-                <div class="flex flex-col items-center justify-center hidden sm:block mr-5"
-                    style="min-width: fit-content;">
-                    <img src="/assets/profile.PNG" alt="Me" width="125" class="slight-round border-box">
-                </div>
-
-                <div class="flex flex-col">
-                    <h1 class="text-3xl">Nathan Gooneratne</h1>
-                    <h3 class="pb-4 text-xs">Computer Science and Game Development @ Northeastern University</h3>
-
-                    <!--Old reworked thing to fit mobile without tailwind size-headers
-                    <h3><b>- gooneratne.n@northeastern.edu</b></h3>
-                    <h3>- nathan.gooneratne@gmail.com</h3>
-                    <div class="flex flex-row items-center">
-                        <h3 class="pr-1">- @liemons</h3>
-                        <img src="/assets/discord.png" alt="Discord" width="25" class="toggle-invert">
-                    </div>
-                    <h3>- 610-348-4303</h3>-->
-
-                    <div class="flex sm:flex-row flex-col sm:items-center" style="gap: 10px;">
-                        <div class="flex flex-col sm:items-center justify-center">
-                            <h3><b>gooneratne.n@northeastern.edu</b></h3>
-                            <h3>nathan.gooneratne@gmail.com</h3>
-                        </div>
-                        <h3 class="hidden sm:block"> | </h3>
-                        <div class="flex flex-row items-center">
-                            <img src="/assets/discord.png" alt="Discord" width="25" class="toggle-invert mr-1">
-                            <h3>@liemons</h3>
-                        </div>
-                        <h3 class="hidden sm:block"> | </h3>
-                        <h3>610-348-4303</h3>
-                    </div>
-
-                    <div class="flex sm:flex-row flex-col sm:items-center mt-4">
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500"
-                            href="https://www.linkedin.com/in/nathan-gooneratne/">
-                            <u><b>linkedin</b></u> </a>
-                        <h3 class="hidden sm:block"> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://github.com/Skyloh">
-                            <u>github</u> </a>
-                        <h3 class="hidden sm:block"> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="https://skyloh.itch.io/">
-                            <u>itch.io</u> </a>
-                        <h3 class="hidden sm:block"> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/GD Tailored Resume - Updated.pdf.pdf"
-                            download>
-                            <u>resume(GD)</u> </a>
-                        <!--
-                            <h3> | </h3>
-                        <a class="hover:text-teal-500 dark:hover:text-amber-500" href="/assets/CS Tailored Resume.pdf" download>
-                            <u>resume(CS)</u> </a>
+                    <!-- REMOVED UNTIL DETAILED CONTENT IS CREATED
+                    <div class="centered-box-content color-element flex flex-col items-center cursor-pointer"
+                        onclick="window.location.href='temporary.html'">
                         -->
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Tab Buttons -->
-        <div class="flex flex-col items-center justify-center">
-            <h3>What are you here to see?</h3>
-            <div class="flex flex-row items-center justify-center" style="gap:15px">
-                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500"
-                    style="text-decoration: underline;" type="GD">Game Development</button>
-                <h3> | </h3>
-                <button class="tab-button active hover:text-teal-500 dark:hover:text-amber-500"
-                    style="text-decoration: underline;" type="CS">Computer Science</button>
-                <h3> | </h3>
-                <button class="tab-button hover:text-teal-500 dark:hover:text-amber-500"
-                    style="text-decoration: underline;" type="O">Favorites</button>
-            </div>
-        </div>
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="https://romulus162.itch.io/oil-city"><u>Oil City</u></a>
+                            </h1>
 
-        <!-- Tab Content -->
-        <div id="tab-1" class="tab-content active">
-            <!-- Box Entries -->
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500 text-xs mb-4" href="https://github.com/remyrouth/OilCity/"><u>Github</u></a>
 
-            <!--GD Oil City-->
-            <div id="GD 1" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+                            <h2 class="mb-4" style="font-size:small">July 2024 - August 2024</h2>
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/remyrouth/OilCity/"><u>Oil City</u></a>
-                        </h1>
-                        <h2 class="mb-4">July 2024 - August 2024</h2>
-                    </div>
+                            <video class="slight-round" width="100%" controls>
+                                <source src="assets/oilcity/videoplayback.mp4" type="video/mp4">
+                            </video>
 
-                    <video class="mr-5 slight-round" width="100%" controls>
-                        <source src="assets/oilcity/videoplayback.mp4" type="video/mp4">
-                    </video>
+                            <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #00b53997; text-align: center; border-radius: 5px;">Released</span>
+                            </div>
 
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>Historical 2D factory-sim about the Polish oil industry</i></b>
+                            </h1>
 
-                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
-                        href="https://romulus162.itch.io/oil-city"><u>play on itch</u></a>
-
-                    <h1 class="mt-2">click tabs below for more information</h1>
-
-                    <!--Accordian (oc)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1oc">
-                            <button type="button" 
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                data-accordion-target="#accordion-body-1oc" aria-expanded="false"
-                                aria-controls="accordion-body-1oc">
-                                <h4 class="flex-grow text-left leading-none hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1oc" class="hidden my-2" aria-labelledby="accordion-heading-1oc">
-                            <p style="font-size: medium;">
-                                This project was the end result of a portion of my study abroad trip to Poland. Together 
-                                with 13 other students from Northeastern, we worked with around 28 students from the 
-                                Polish-Japanese Academy of Information Technology to develop games from game jam concepts 
-                                centering on topics of Polish historical or cultural significance. My team was a collective 
-                                group of 10 students split across the programming, art, and music disciplines. Together, we 
-                                overhauled the game jam concept and developed Oil City in Unity, a city-builder factory game in line 
-                                with Factorio where you must maintain the Polish oil industry through its historical hardships 
-                                and global triumphs. 
-                                <br><br>
-                                In this project, I took on the role of a programmer and game designer. The main thing I contributed
-                                to the project was the implementation of the pipe system and time manager.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-2oc">
-                            <button type="button" 
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                data-accordion-target="#accordion-body-2oc" aria-expanded="false"
-                                aria-controls="accordion-body-2oc">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">Created a tree-based game-tick manager script
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2oc" class="hidden my-2" aria-labelledby="accordion-heading-2oc">
-                            <p>
-                                In order for the game to function, there needed to be some system in charge of delegating game ticks to objects that 
-                                needed them. This included various time-related managers such as the TimelineManager, in addition to the main mechanic
-                                of the game: oil flow. To create a generalized tool, I made a TimeManager script that would store its registered objects
-                                in a forest list; the roots of the trees being the only gameobjects to receive the ticks. For objects like the Woodcutter's house,
-                                it would remain in the list as a singleton tree. For things like the Train Station (often the root of the oil system), it would
-                                receive the tick, then recurse down its members to pass the invocation on to them as well. This kept every system deterministic in 
-                                their execution order (i.e. in an oil system, the consumer wouldn't somehow go before the producer), which made the game easy to debug
-                                and play.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-3oc">
-                            <button type="button" data-accordion-target="#accordion-body-3oc" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3oc">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Developed a tree relationship for pipes
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3oc" class="hidden my-2" aria-labelledby="accordion-heading-3oc">
-                            <p>
-                                I was in charge of making the pipes, a crucial part of the game. To best fit with the requests of players and QA testers, I had
-                                to rework the system's implementation to allow for different types of connections alongside ambiguous connections and temporarily invalid
-                                connections. Pipes had to flow between two Flowable structures (a building or another pipe), maintain a valid connection between
-                                said structures (i.e. flowing from a valid direction into a valid direction and containing the expected fluid type of either Kerosene or Oil 
-                                for that kind of connection), and possess the ability to be "flipped" on demand in case a player made a mistake in placing them down.
-
-                                <br><br>
-                                This was a complicated mechanic that gave me a bit of trouble. The problems I had mainly revolved around pipes of zero or one length (created by
-                                connecting to adjacent pipes), and creating understandable syntax for documenting the obscure problems that popped up. The former proved to create
-                                a lot of issues due to my definiton of pipes have a left/right-hand side endpoints. A singleton pipe had the two positions be the exact same, meaning
-                                that a further distinction with pipe flow direction AT those endpoints was necessary, from which made it determinable what tile the singleton pipe was
-                                flowing in to or out from.
-
-                                <br><br>In retrospect, a lookup table of tile positions to Flowable objects would've been a better approach for this 
-                                system rather than a hard-coded tree as it would've made the coupling/decoupling issues trivial to solve, if only 
-                                a bit more tedious to access.
-                            </p>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Bespoke game tick distribution system and pipe mechanics</li>
+                                <li class="text-s">Complex placement-validation algorithm based on QA feedback</li>
+                                <li class="text-s">10-person studio over 1 month with Agile/Scrum and industry consult</li>
+                                <li class="text-s">Tabled at GamesCom and DevsCom 2024</li>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!--GD Beat-->
-            <div id="GD 1" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+                <div class="fade flex-1 centered-box-container"> <!-- TEMPORARY REMOVED 'pop-element' SEE BELOW-->
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Skyloh/project-beat"><u>Project Beat</u></a>
-                        </h1>
-                        <h2 class="mb-4">December 2023 - Present</h2>
-                    </div>
+                    <!-- TEMPORARY, SEE BELOW -->
+                    <div class="centered-box-content color-element, flex flex-col items-center">
 
-                    <div class="flex flex-row items-center mr-auto">
-                        <video class="mr-5 slight-round" controls>
-                            <source src="assets/projectbeat/scrubdemo.mp4" type="video/mp4">
-                        </video>
+                    <!-- REMOVED UNTIL DETAILED CONTENT IS CREATED
+                    <div class="centered-box-content color-element flex flex-col items-center cursor-pointer"
+                        onclick="window.location.href='temporary.html'">
+                        -->
 
-                        <div class="flex flex-col justify-center">
-                            <!-- TODO: Add gameplay images here. -->
-                        </div>
-                    </div>
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold mb-4">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="https://store.steampowered.com/app/3578250/Clayground/"><u>Clayground</u></a>
+                            </h1>
 
-                    <h1 class="mt-2">click tabs below for more information</h1>
+                            <h2 class="mb-4" style="font-size:small">September 2024 - December 2024</h2>
 
-                    <!--Accordian (pb)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1pb">
-                            <button type="button" data-accordion-target="#accordion-body-1pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1pb" class="hidden my-2" aria-labelledby="accordion-heading-1pb">
-                            <p style="font-size: medium;">
-                                A <b>solo personal project (WIP)</b> in which I challenged myself to create a modular
-                                fighting-game framework. The main focus of this was particularly on the structural challenge of
-                                designing asset code structures that are easy for designers to create stuff with, but also
-                                powerful in their modularity. I evaluated several approaches to implementing move data, but
-                                settled with Scriptable Objects and repurposing Unity’s Mechanim State Machine Animation States.
-                                <br>
-                                <br>
-                                I used ripped sprites from <i>Scott Pilgrim VS The World: The Game</i> so I could focus on the
-                                programming. Every script is custom-written in Unity, with the only package being InputSystem.
-                            </p>
-                        </div>
+                            <img class="slight-round" width="100%" src="assets/clayground.gif">
 
-                        <h2 id="accordion-heading-2pb">
-                            <button type="button" data-accordion-target="#accordion-body-2pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Made in <b>Unity</b> with <b>InputSystem Package</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2pb" class="hidden my-2" aria-labelledby="accordion-heading-2pb">
-                            <p>
-                                This project is being made in Unity, with the only package currently in use being the InputSystem package. I chose
-                                this package because I wanted to have a non-programmatical coupling between input and behaviors. With InputSystem's 
-                                serializable unityevents for input, this was a clear choice.
-                            </p>
-                        </div>
+                            <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #0dafefde; text-align: center; border-radius: 5px;">VR</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #719fcede; text-align: center; border-radius: 5px;">Online</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #82bf5ade; text-align: center; border-radius: 5px;">Internship</span>
+                            </div>
 
-                        <h2 id="accordion-heading-5pb">
-                            <button type="button" data-accordion-target="#accordion-body-5pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-5pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">Wrote custom <b>input-buffer</b> with a
-                                    <b>binary-insertion algorithm</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-5pb" class="hidden my-2" aria-labelledby="accordion-heading-5pb">
-                            <p>
-                                In order to achieve a smooth gameplay feel, I wrote my own input-buffering system to prevent buttons from being lost and
-                                to allow players to input actions during the downtime of another. This buffer used two lists in parallel to keep track of 
-                                input history and decay period before expiration, using binary insertion to add inputs quickly to the lists. I didn't use
-                                a priority queue for the input histories based on the decay time left because the queue would need to reorganize itself
-                                often. Additionally, the queue would need to remove items that may not be at the front in the event of an input expiration.
-                                This would've gotten messy, so I stuck with two paired lists and the invariant that they were related by index.
-                            </p>
-                        </div>
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>Online 3D physics-based multiplayer VR chatroom</b></i>
+                            </h1>
 
-                        <h2 id="accordion-heading-3pb">
-                            <button type="button" data-accordion-target="#accordion-body-3pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Utilized custom-written <b>Python</b> sprite splicing script for anims
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3pb" class="hidden my-2" aria-labelledby="accordion-heading-3pb">
-                            <p>
-                                As mentioned in the project description, I used sprites ripped from a game in order to develop the framework. These sprites were organized on
-                                a sprite sheet in uneven columns and rows, making the slicing very difficult. To circumvent the time required to take manual screenshots of each frame,
-                                I wrote a python script to detect and flood-fill individual sprites, writing the data to separate image files. This allowed me to drastically cut down on the 
-                                time required to set up the art.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-4pb">
-                            <button type="button" data-accordion-target="#accordion-body-4pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-4pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Developed data storage system
-                                    <b>independant of Clips</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-4pb" class="hidden my-2" aria-labelledby="accordion-heading-4pb">
-                            <p>
-                                When designing this kind of game, I had considered using AnimationEvents in the past as a means of
-                                storing information for callbacks and triggering functions. However, this would prove to be a bad design choice
-                                as the information was hard-coded into animation clips, making them impossible to reuse without copying the 
-                                stored information. Additionally, the animation event system uses reflection to activate callbacks, a practice
-                                which scales poorly when lots of components or children are in the object's hierarchy.
-                                <br> <br>
-                                To fix this, I used a SO design of "Tracks" with "Sequences". Sequences contained Tracks which contained KVpairs
-                                of frame timestaps paired with a generic value. A hitbox sequence for example would have hitbox data at certain frames,
-                                indicating that at the given frame timestamp, that hitbox should appear. In order to run a Sequence, I used Unity's Mechanim
-                                State Machine monobehavior base script as a sort of launching point. Animation states would have their respective clips for certain
-                                attacks, but would all use the same state script. This state script was in charge of executing the attack's respective SequenceSO, running
-                                through every Track with every Animator update.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-6pb">
-                            <button type="button" data-accordion-target="#accordion-body-6pb" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-6pb">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Implemented <b>animation scrubber</b> for debug viewing of data
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-6pb" class="hidden my-2" aria-labelledby="accordion-heading-6pb">
-                            <p>
-                                To help with the development of Tracks and Sequences, I created a dev scene in Unity to "scrub" through an animation and its Sequence.
-                                This would play back the animation and Sequence in parallel, sending the event invocations from the Sequence to debug mocks of the same
-                                components, which would report the information to the console or draw things in the scene to represent the gathered data.
-                                <br> This was very helpful in cutting down the amount of time I spent wading through code and SOs for bugfixing, and I think
-                                it looks pretty neat.
-                            </p>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Tools programming for  debugging of network and game systems</li>
+                                <li class="text-s">Implemented core game systems for player minigame HUDs and statuses</li>
+                                <li class="text-s">Utilized Photon Fusion 2 to create performant, synced networked objects</li>
+                                <li class="text-s">Developed networked solutions for syncing particle sims and ownership resolution</li>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="fade flex-1 centered-box-container">
+                    <div class="centered-box-content flex flex-col items-center">
 
-            <!--GD Dall E-->
-            <div id="GD 2" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="https://whatremainsofme.itch.io/"><u>What Remains of Me</u></a>
+                            </h1>
+                            
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500 text-xs mb-4" href="https://github.com/Games-at-Northeastern/What-Remains-of-M"><u>Github</u></a>
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Skyloh/Project-Dalle"><u>Project Dall-E</u></a>
-                        </h1>
-                        <h2 class="mb-4">March 2023 - April 2023</h2>
-                    </div>
-
-                    <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" width="66%" controls>
-                            <source src="assets/projectdalle/dall-e.mp4" type="video/mp4">
-                        </video>
-
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/projectdalle/painting.png" alt="gameplay-painting"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/projectdalle/npc.png" alt="gameplay-npc"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                        </div>
-                    </div>
-
-                    <h1 class="mt-2">click tabs below for more information</h1>
-
-                    <!--Accordian (pd)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row my-2"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1pd">
-                            <button type="button" data-accordion-target="#accordion-body-1pd" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1pd">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1pd" class="hidden my-2" aria-labelledby="accordion-heading-1pd">
-                            <p style="font-size: medium;" class="mt-2">
-                                A solo personal project puzzle game about matching Dall-E generated pictures to their
-                                original
-                                prompts. The main goal of the project was to finish and polish a project completely.
-                                Some
-                                sub-goals were creating an easily-approachable game, extensible dialogue system, dynamic
-                                and
-                                interesting NPCs, and variable levels of win conditions rather than a cut-and-dry
-                                right-or-wrong
-                                puzzle system.
-                            </p>
+                            <h2 class="mb-4" style="font-size:small">September 2023 - December 2023</h2>
                         </div>
 
-                        <h2 id="accordion-heading-2pd">
-                            <button type="button" data-accordion-target="#accordion-body-2pd" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2pd">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Made in <b>Unity</b> with
-                                    <b>Blender</b> and <b>Maya</b>.</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2pd" class="hidden my-2" aria-labelledby="accordion-heading-2pd">
-                            <p>
-                                This project was made in Unity 2019, using Blender for modeling and animation with Maya
-                                as an animation touch-up and ASCII fbx exporter. All assets aside from the AI art were
-                                self-made.
-                                The art itself was generated with Dall-E.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-3pd">
-                            <button type="button" data-accordion-target="#accordion-body-3pd" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3pd">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">
-                                    Created NPCs with <b>Navmesh</b>, <b>ShapeKeys</b>, and <b>Rigging</b> constraints
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3pd" class="hidden my-2" aria-labelledby="accordion-heading-3pd">
-                            <p>
-                                In order to bring the (simple) characters to life, I programmed collision-avoidant
-                                roaming behaviors
-                                for the NPCs using the Navmesh component just to pathfind rather than pathfind AND
-                                traverse. Additionally,
-                                I gave the models shapekeys for various emotions to incorporate in their dialogue boxes.
-                                The models also had
-                                Rigging multi-aim constraints so that the NPCs could look at objects in the scene as
-                                they passed by.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-4pd">
-                            <button type="button" data-accordion-target="#accordion-body-4pd" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-4pd">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">
-                                    Built custom <b>dialogue system</b> with dialogue-world events
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-4pd" class="hidden my-2" aria-labelledby="accordion-heading-4pd">
-                            <p>
-                                It wasn't really necessary for the game's mechanic, but I wanted cheeky NPCs, so I made
-                                a dialogue system.
-                                As one does. It was a fully-custom made system that allowed for variable text speeds,
-                                in-editor dialogue editing,
-                                and easily-extensible world-events during dialogue, such as animations, flag triggers,
-                                gameobject toggles, etc.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--What Remains-->
-            <div id="GD 3" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
-
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Games-at-Northeastern/What-Remains-of-Me"><u>What Remains of
-                                    Me</u></a>
-                        </h1>
-                        <h2 class="mb-4">Sept. 2023 - Dec. 2023</h2>
-                    </div>
-
-                    <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" controls>
+                        <video class="slight-round" width="100%" controls>
                             <source src="assets/remains/remainsgame.mp4" type="video/mp4">
                         </video>
-                    </div>
 
-                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
-                        href="https://whatremainsofme.itch.io/what-remains-of-me"><u>(old release build) itch</u></a>
+                        <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #ef6b0dde; text-align: center; border-radius: 5px;">WIP</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #3de2a0de; text-align: center; border-radius: 5px;">Demo</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #00b53997; text-align: center; border-radius: 5px;">Released</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #bfbc5ade; text-align: center; border-radius: 5px;">University</span>
+                            </div>
 
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>2D narrative platformer focusing on resource-based navigational puzzles</b></i>
+                            </h1>
 
-                    <h1 class="mt-2">click tabs below for more information</h1>
-
-                    <!--Accordian (wr)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row my-2"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1wr">
-                            <button type="button" data-accordion-target="#accordion-body-1wr" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1wr" class="hidden my-2" aria-labelledby="accordion-heading-1wr">
-                            <p style="font-size: medium;">
-                                A multi-semester project for a class I took called <b>Game Studio</b>. In a mock studio
-                                environment with 40 other students, I continued work on a student-led project. I
-                                primarily
-                                contributed to the codebase with custom utility tools (e.g. facilitating puzzle design
-                                with
-                                line
-                                rendering utilities) and refactoring of old student code, but I also worked on writing
-                                and
-                                implementing dialogue through the external <b>Inky</b> application. I worked in a small
-                                team
-                                with 6 other interdisciplinary students in which we would create weekly tasks, following
-                                the
-                                <b>Agile</b> workflow with <b>Jira</b>.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-2wr">
-                            <button type="button" data-accordion-target="#accordion-body-2wr" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Made in <b>Unity</b> with
-                                    <b>Inky</b>.</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2wr" class="hidden my-2" aria-labelledby="accordion-heading-2wr">
-                            <p>
-                                This game was developed in the Unity engine. The main software I used aside from that is
-                                <b>Inky</b>, a narrative
-                                tool that has a Unity plugin. Some of my work was adapting dialogue to this plugin, as
-                                well as bugfixing
-                                implementation details and creating how-to guides for the dialogue writers.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-3wr">
-                            <button type="button" data-accordion-target="#accordion-body-3wr" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Used <b>git</b>, <b>Github
-                                        Desktop</b>, and <b>Jira</b>.</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3wr" class="hidden my-2" aria-labelledby="accordion-heading-3wr">
-                            <p>
-                                For this project, we used <b>git and Github Desktop</b> for source control, operating on
-                                sprint-branches to maintain a clean
-                                working tree with a stable build at all times. Additionally, to support the mock studio
-                                environment, we used <b>Jira</b> to delegate
-                                and organize tasks with the story point system. We would also have scrums with our
-                                designated groups and disciplines.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-4wr">
-                            <button type="button" data-accordion-target="#accordion-body-4wr" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-4wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Refactored moving-element
-                                    implementation to generalize
-                                    behavior.</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-4wr" class="hidden my-2" aria-labelledby="accordion-heading-4wr">
-                            <p>
-                                The original code for moving elements such as platforms was hard-coded to only allow two
-                                points of movement, and ONLY platforms
-                                could move. This was pretty limiting, so I redesigned the moving element system to be a
-                                generic component that allowed for multiple
-                                anchor points to traverse between, accessible in the editor. Additionally, I added
-                                different wrapping types so designers could
-                                easily change the movement, behavior, and start position of platforms.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-5wr">
-                            <button type="button" data-accordion-target="#accordion-body-5wr" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-5wr">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Implemented <b>custom
-                                        utility tools</b> for level designers.</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-5wr" class="hidden my-2" aria-labelledby="accordion-heading-5wr">
-                            <p>
-                                In order to help level designers in the creation of "power lines" to represent energy
-                                flowing in our puzzle system, I created an
-                                editor script tool that would use the line renderer component to generate a prefab with
-                                the baked line mesh between a set of points.
-                                The line generation used a custom-written pathfinding algorithm and supported several
-                                creative parameters. I also created guides to use
-                                for this tool as well as the dialogue implementation pipeline for artists and dialogue
-                                writers.
-                            </p>
-                        </div>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Editor tools programming for facilitating level decoration</li>
+                                <li class="text-s">Abstracted core puzzle systems for extensibility and easy level design</li>
+                                <li class="text-s">Used Jira and Agile/Scrum workflows in a 40-student studio environment</li>
+                                <li class="text-s">Performed QA and interdisciplinary communication to finalize levels</li>
+                            </div>
                     </div>
                 </div>
             </div>
 
-            <!--Move Shoot-->
-            <div id="GD 4" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+            <!-- ANOTHER ROW -->
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/nugamestudioclub/ludum-move-shoot"><u>Move Shoot</u></a>
-                        </h1>
-                        <h2 class="mb-4">October 2023</h2>
-                    </div>
+            <!-- Box Row: flexes as row when above 48 rem, flexes as col for mobile and tablets -->
+            <div class="flex flex-col [@media(min-width:1050px)]:flex-row flex-1 items-start justify-center">
 
-                    <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" width="66%" controls>
-                            <source src="assets/moveshoot/moveshoot.mp4" type="video/mp4">
-                        </video>
+                <!-- Box Entries -->
+                <div class="fade flex-1 centered-box-container">
+                    <div class="centered-box-content flex flex-col items-center">
 
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/moveshoot/move.png" alt="gameplay-move"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/moveshoot/game.png" alt="gameplay-game"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                        </div>
-                    </div>
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="https://skyloh.itch.io/project-dall-e"><u>Project Dall-E</u></a>
+                            </h1>
+                            
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500 text-xs mb-4" href="https://github.com/Skyloh/Project-Dalle"><u>Github</u></a>
 
-                    <a class="mt-2 hover:text-teal-500 dark:hover:text-amber-500"
-                        href="https://skyloh.itch.io/move-shoot"><u>play on itch</u></a>
+                            <h2 class="mb-4" style="font-size:small">March 2023 - April 2023</h2>
 
+                            <video class="slight-round" width="100%" controls>
+                                <source src="assets/projectdalle/dall-e.mp4" type="video/mp4">
+                            </video>
 
-                    <h1 class="mt-2">click tabs below for more information</h1>
-                    
-                    <!--Accordian-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row my-2"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1">
-                            <button type="button" data-accordion-target="#accordion-body-1" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1" class="hidden my-2" aria-labelledby="accordion-heading-1">
-                            <p style="font-size: medium;">
-                                A game jam submission for Ludum Dare 54. Working in a team of 5, I led development on a
-                                movement-shooter with a limited-space twist. I mainly contributed programming and game
-                                design,
-                                but also mentored others in learning Blender for animation and modeling, and guided the
-                                programming division with tasks and code-design structures and interfaces.
-                            </p>
-                        </div>
+                            <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #3de2a0de; text-align: center; border-radius: 5px;">Demo</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #00b53997; text-align: center; border-radius: 5px;">Released</span>
+                            </div>
 
-                        <h2 id="accordion-heading-2">
-                            <button type="button" data-accordion-target="#accordion-body-2" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Made in <b>Unity</b> with
-                                    <b>Blender</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2" class="hidden my-2" aria-labelledby="accordion-heading-2">
-                            <p>
-                                The project used Unity 2019 as it's main engine. I helped others by providing answers to
-                                their questions on
-                                implementation details and Unity systems as well as operating as the lead programmer.
-                                For Blender, I instructed
-                                the team's animator in how to use the software in addition to giving them some tips for
-                                satisfying and clean animations.
-                            </p>
-                        </div>
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>3D simple first-person puzzle game about matching prompts to images</i></b>
+                            </h1>
 
-                        <h2 id="accordion-heading-3">
-                            <button type="button" data-accordion-target="#accordion-body-3" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Movement and aim-assisted
-                                    FPS with <b>7</b> speed-runnable levels</h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3" class="hidden my-2" aria-labelledby="accordion-heading-3">
-                            <p>
-                                Most of the project was spent on development, so near the end of the jam, I designed and
-                                implemented 7 levels
-                                to highlight key aspects of our game: the movement, shooting, and our wall-jump
-                                mechanics. it was a fun challenge
-                                to design levels that force the player into discovering the mechanics in a natural way
-                                in addition to being interesting
-                                to explore.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-4">
-                            <button type="button" data-accordion-target="#accordion-body-4" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-4">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Quick, dynamic,
-                                    reaction-focused gameplay</h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-4" class="hidden my-2" aria-labelledby="accordion-heading-4">
-                            <p>
-                                The design paradigm of our game. All of the developers on our team wanted this game to
-                                be speedrunnable, so we wanted
-                                to make a quick, fast experience where players had to rely on their reaction times (and
-                                failing that,
-                                their memory of the map) in addition to their creativity to find routes through our
-                                levels.
-                            </p>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Solo-developed passion project to create a polished game demo</li>
+                                <li class="text-s">Custom dialogue-system with animations, world events, and shape-key integration</li>
+                                <li class="text-s">Custom asset importer to facilitate art integration</li>
+                                <li class="text-s">Optimized Navmesh agent usage for performance and collision avoidance</li>
+                            </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
 
-            <!--Summer CC-->
-            <div id="GD 6" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+                <div class="fade flex-1 centered-box-container">
+                    <div class="centered-box-content flex flex-col items-center">
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Skyloh/summer-cc"><u>Summer CC</u></a>
-                        </h1>
-                        <h2 class="mb-4">July 2023</h2>
-                    </div>
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold mb-4">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="https://christian-fitzpatrick.itch.io/robotanist"><u>Robotanist</u></a>
+                            </h1>
 
-                    <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" controls>
-                            <source src="assets/summercc/summercc.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                            <h2 class="mb-4" style="font-size:small">January 2025 - April 2025</h2>
+                            
+                            <img class="slight-round" width="100%" src="assets/robotanist_cut.gif">
+                            
+                            <!-- PLACEHOLDER
+                            <video class="slight-round" width="100%" controls>
+                                <source src="assets/projectdalle/dall-e.mp4" type="video/mp4">
+                            </video>
+                            -->
 
-                    <h1 class="mt-2">click tabs below for more information</h1>
+                            <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #3de2a0de; text-align: center; border-radius: 5px;">Demo</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #00b53997; text-align: center; border-radius: 5px;">Released</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #bfbc5ade; text-align: center; border-radius: 5px;">University</span>
+                            </div>
 
-                    <!--Accordian (sc)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1sc">
-                            <button type="button" data-accordion-target="#accordion-body-1sc" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1sc">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1sc" class="hidden my-2" aria-labelledby="accordion-heading-1sc">
-                            <p style="font-size: medium;">
-                                A short summer project where I challenged myself to create a non-kinematic
-                                state-machine-based
-                                character controller that was different from the standard implementation in two ways:
-                            <ol>
-                                <li>1 - The state machine was composition-based, meaning states could be pulled in and
-                                    out
-                                    of
-                                    the state machine willy-nilly at runtime with no adverse/unpredicatable effects.
-                                </li>
-                                <li>2 - The player used a floating-capsule implementation as opposed to the
-                                    ground-contact
-                                    capsule implementation which often had implementation quirks with stairs or
-                                    elevation.
-                                </li>
-                            </ol>
-                            </p>
-                        </div>
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>2D cozy puzzle simulation game about growing flowers</i></b>
+                            </h1>
 
-                        <h2 id="accordion-heading-3sc">
-                            <button type="button" data-accordion-target="#accordion-body-3sc" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3sc">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">Made in <b>Unity</b> with
-                                    animations sourced from <b>Mixamo</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3sc" class="hidden my-2" aria-labelledby="accordion-heading-3sc">
-                            <p>
-                                This was a Unity project in which I used a model from player
-                                model from the
-                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:medium"
-                                    href="https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456"><u>Unity
-                                        Asset Store</u></a> and a bunch of pre-packed Mixamo animations. This was to cut
-                                down on the time I spent
-                                working on the animations so that I could focus on the technical side of things.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-2sc">
-                            <button type="button" data-accordion-target="#accordion-body-2sc" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2sc">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Created a <b>Composition
-                                        non-kinematic</b> floating-collider CC
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2sc" class="hidden my-2" aria-labelledby="accordion-heading-2sc">
-                            <p>
-                                As was the main goal of the project, I created a non-kinematic character controller that
-                                used the floating-collider
-                                implementation to avoid the quirks of stairs and slopes. Additionally, I made the
-                                controller a monobehavior composition-based
-                                state machine so that states could be added and removed at runtime. I was met with a lot
-                                of difficulties about execution order and
-                                "assessing" information about the world, but it was a fun challenge. There are a lot of
-                                parameters to tweak for this implementation, too.
-                            </p>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Led and bugfixed pipeline for art integration with programmed systems</li>
+                                <li class="text-s">Developed UI/UX in accordance to playtest feedback</li>
+                                <li class="text-s">Managed tasks with Trello, GDD, and Agile/Scrum</li>
+                                <li class="text-s">Custom post-processing shader solution for UI and unique progression-based gradient effect</li>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                
+                <div class="fade flex-1 centered-box-container">
+                    <div class="centered-box-content flex flex-col items-center">
 
-            <!--Physics Game-->
-            <div id="GD 7" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
+                        <div class="flex flex-col items-center ">
+                            <h1 class="text-3xl font-bold">
+                                <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
+                                    href="skyloh.itch.io"><u>Capstone Game</u></a>
+                            </h1>
+                            
+                            <a class="hover:text-teal-500 dark:hover:text-amber-500 text-xs mb-4" href="https://github.com/Skyloh/capstone-game"><u>Github</u></a>
 
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            GD |
-                            <a class="hover:text-teal-500 dark:hover:text-amber-500" style="font-size:xx-large"
-                                href="https://github.com/Skyloh/UnityPhysicsGame/tree/main"><u>Physics Game</u></a>
-                        </h1>
-                        <h2 class="mb-4">May 2022</h2>
-                    </div>
+                            <h2 class="mb-4" style="font-size:small">September 2025 - Present</h2>
+                            
+                            <img class="slight-round" width="100%" src="assets/capstone_temp.png">
+                            
+                            <!-- PLACEHOLDER
+                            <video class="slight-round" width="100%" controls>
+                                <source src="assets/projectdalle/dall-e.mp4" type="video/mp4">
+                            </video>
+                            -->
 
-                    <div class="flex flex-row items-center justify-center">
-                        <img src="/assets/physicsgame/cubethrow.gif" width="66%" alt="gameplay-throw"
-                            class="mr-5 pop-element lightboxable-image" onclick="openLightbox(this)">
+                            <!-- Tag section; causes scaling -->
+                            <div class="flex flex-1 flex-row pt-2">
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(132, 37, 180); text-align: center; border-radius: 5px;">C#</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: rgb(130, 130, 130); text-align: center; border-radius: 5px;">Unity</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #ef6b0dde; text-align: center; border-radius: 5px;">WIP</span>
+                                <span class="mx-2 text-xs p-1"
+                                    style="background-color: #bfbc5ade; text-align: center; border-radius: 5px;">University</span>
+                            </div>
 
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/physicsgame/dissolver.gif" alt="gameplay-dissolve"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                            <img src="/assets/physicsgame/plat.gif" alt="gameplay-platform"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                        </div>
-                    </div>
+                            <h1 class="py-3 text-l text-center">
+                                <i><b>2D puzzle-combat turn-based RPG</i></b>
+                            </h1>
 
-
-                    <p style="font-size: medium;" class="mt-2">
-                        Below is the prototype of the game's main mechanic alongside a second mechanic demonstration in the finished product.
-                    </p>
-
-                    <div class="flex flex-row items-center justify-center mt-4">
-                        <video class="mr-5 slight-round" width="50%" controls>
-                            <source src="assets/physicsgame/proto.mp4" type="video/mp4">
-                        </video>
-                        <video class="slight-round" width="50%" controls>
-                            <source src="assets/physicsgame/fly.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-                    <h1 class="mt-4">click tabs below for more information</h1>
-
-                    <!--Accordian (pp)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-2""
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1pp">
-                            <button type="button" data-accordion-target="#accordion-body-1pp" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1pp">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1pp" class="hidden my-2" aria-labelledby="accordion-heading-1pp">
-                            <p style="font-size: medium;" class="mt-2">
-                                The end result of my senior project. My goal was to create a small, polish,
-                                proof-of-concept
-                                for
-                                a puzzle game all about attraction and repulsion. To do this, I learned new tools like
-                                ShaderGraph and the HDRP rendering pipeline. I also used practices like Inheritance and
-                                modular
-                                OoD in order to create game mechanics like my reusable puzzle system and the
-                                gravitational-pull
-                                system. The latter allowed me to extend the game's original mechanic to affect the
-                                player as
-                                well, which I was pleasantly surprised by.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-2pp">
-                            <button type="button" data-accordion-target="#accordion-body-2pp" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2pp">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">Made in <b>Unity HDRP</b> with <b>Blender</b>, <b>InputSystem</b>, and
-                                    <b>ShaderGraph</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2pp" class="hidden my-2" aria-labelledby="accordion-heading-2pp">
-                            <p>
-                                This was the first project in which I tried my hand at creating some shaders. Rather than use the HLSL shader
-                                langauge, I started with ShaderGraph (from the HDRP render pipeline) in order to get an understanding of how
-                                shaders work. I created some basic shaders for illuminated tiles, water, and "disslution grids" (dissolving energy fields).
-                                <br><br>
-                                Much like the rest of my projects, I used Unity and Blender for the game engine, asset creation, and animation creation. This was
-                                the first time I used the InputSystem package as well.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-4pp">
-                            <button type="button" data-accordion-target="#accordion-body-4pp" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-4pp">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">First-person physics game with extensible puzzle dev system
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-4pp" class="hidden my-2" aria-labelledby="accordion-heading-4pp">
-                            <p>
-                                This game was made with puzzles a la <i>Portal 2</i>; objects would give or receive power. This led me to create an extensible
-                                interface and class structure to easily create new kinds of puzzle objects (a button, a dissolving gate, a cube-former, etc.)
-                                and connect them together in the scene.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-3pp">
-                            <button type="button" data-accordion-target="#accordion-body-3pp" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3pp">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500">Custom non-kinematic state machine player controller
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3pp" class="hidden my-2" aria-labelledby="accordion-heading-3pp">
-                            <p>
-                                This was the first time I wrote a character controller for Unity from scratch. I made a non-kinematic rigidbody player
-                                controller that I could easily impart external forces to through my main game mechanic in order to make the movement
-                                feel fluid and natural while also having easy control over parameters. I also made it use a state machine to avoid 
-                                disorganized code, which worked out pretty well for my first time. 
-                                <br><br>
-                                Additionally, I utilized camera overlays to produce a User HUD. It was a cool technique that taught me a lot about how
-                                cameras render and cull objects, including how view frustums sometimes cull things within view and how to avoid that.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Java Journal-->
-            <div id="CS 5" class="fade pop-element entry centered-box-container">
-                <div class="centered-box-content flex flex-col items-center">
-
-                    <div class="flex flex-row items-center expand-flex-row">
-                        <h1 class="text-3xl font-bold mb-4">
-                            CS | Java Journal
-                        </h1>
-                        <h2 class="mb-4">June 2023</h2>
-                    </div>
-
-                    <div class="flex flex-row items-center justify-center">
-                        <video class="mr-5 slight-round" width="66%" controls>
-                            <source src="assets/journal/jimbly.mp4" type="video/mp4">
-                        </video>
-
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="/assets/journal/PA05.jpg" alt="uml" class="pop-element lightboxable-image"
-                                onclick="openLightbox(this)">
-                            <img src="/assets/journal/GUIScreenshot3.png" alt="gui-example2"
-                                class="pop-element lightboxable-image" onclick="openLightbox(this)">
-                        </div>
-                    </div>
-
-                    <h1 class="mt-2">click tabs below for more information</h1>
-
-                    <!--Accordian (jj)-->
-                    <div data-accordion="open" class="flex flex-col expand-flex-row mt-4"
-                        data-active-classes="text-teal-500 dark:text-amber-500">
-                        <h2 id="accordion-heading-1jj">
-                            <button type="button" data-accordion-target="#accordion-body-1jj" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-1jj">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> <b>Project Description</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-1jj" class="hidden my-2" aria-labelledby="accordion-heading-1jj">
-                            <p style="font-size: medium;">
-                                The final project for our <b>Object-Oriented Design</b> class. With two other students, we
-                                made
-                                a JavaFX-based bullet journal using design patterns (MVC). The goal of the project was to
-                                create
-                                an easily extensible codebase with modular implementations that would be compounded upon
-                                with
-                                further iterations of the assignment. One of the lightbox images includes the UML diagram we
-                                made for the code layout of our project.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-2jj">
-                            <button type="button" data-accordion-target="#accordion-body-2jj" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-2jj">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Used <b>Java</b>, <b>JavaFX</b>, <b>git</b>, and <b>Gradle</b>
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-2jj" class="hidden my-2" aria-labelledby="accordion-heading-2jj">
-                            <p>
-                                Working in a group of three allowed for me to get some experience working with git source control. We used separate branches per person, merging
-                                when relevant tasks overlapped. Java and JavaFX were used to create the application, with Gradle as the main library/asset manager and build tool. It
-                                also provided build tasks for unit testing, which our team used to validate the functionality of the backend.
-                            </p>
-                        </div>
-
-                        <h2 id="accordion-heading-3jj">
-                            <button type="button" data-accordion-target="#accordion-body-3jj" aria-expanded="false"
-                            class="flex items-center justify-between w-full p-4 accordion-box"
-                                aria-controls="accordion-body-3jj">
-                                <h4 class="hover:text-teal-500 dark:hover:text-amber-500"> Implemented File I/O, FXML-based UI, and custom dialogs
-                                </h4>
-                            </button>
-                        </h2>
-                        <div id="accordion-body-3jj" class="hidden my-2" aria-labelledby="accordion-heading-3jj">
-                            <p>
-                                In order to implement the functionality of being able to read and write schedules to files, I worked with FXML's file browser
-                                dialog to select file paths, using java's File I/O library to read from and write to selected paths. Additionally, we implemented
-                                password locks for these files, preventing them from being read until a valid password was given.
-                                <br> <br>
-                                For the user interface design, we used javaFX for its ease of implementation and coupling with back-end functionality. We ended up
-                                forgoing the tradition MVC design in favor of custom root UI controllers that extended layout elements. This allowed us to easily 
-                                create UI at runtime without the worry of having to set up connections and the like.
-                                <br> <br>
-                                Additionally, we wanted to avoid having a complicated user interface for our program. To achieve this, we made use of many custom dialog 
-                                popups so that information would be displayed on throw-away windows that wouldn't clutter the main view.
-                            </p>
+                            <div class="px-5 flex flex-col items-start gap-2" style="width: 100%;">
+                                <li class="text-s">Primary backend programmer and game design lead</li>
+                                <li class="text-s">MVC-adherent design for extensible and approachable codebase</li>
+                                <li class="text-s">Coroutine-based code flow for simplicity and extensibility</li>
+                                <li class="text-s">Intra and interdisciplinary collaboration</li>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Contact Header -->
+        <div class="flex flex-col items-center justify-center"
+            style="background-color:#5f5f5f; padding:1rem; margin-top: 4rem; margin-bottom: 2rem;">
+            <h1 id="contact" class="text-3xl">
+                Contact and Socials
+            </h1>
+        </div>
+
+        <div class="flex items-center justify-center w-full max-w-full overflow-hidden">
+
+            <!-- TEMPORARILY REMOVED
+            <div class="flex-1 max-w-md min-w-0 pl-5 pr-10">
+                <img src="assets/placeholder.png"
+                    class="hidden object-contain w-full h-auto [@media(min-width:1050px)]:block">
+            </div>
+            -->
+            <div class="flex flex-col justify-center">
+                <a class="flex items-center pb-5" href="mailto:nathan.gooneratne@gmail.com" target="_blank"
+                    style="font-size:large">
+                    <img src="/assets/envelope.svg" alt="mailing" width="35" class="toggle-invert mr-3">
+                    <h2 class="pr-5 hover:text-amber-500"> <u>nathan.gooneratne@gmail.com</u> </h2>
+                </a>
+
+                <a class="flex items-center pb-5" href="https://github.com/Skyloh" target="_blank"
+                    style="font-size:large">
+                    <img src="/assets/github.png" alt="Git" width="35" class="toggle-invert mr-3">
+                    <h2 class="pr-5 hover:text-amber-500"> <u>Skyloh</u> </h2>
+                </a>
+
+                <div class="flex items-center pb-5" style="font-size:large">
+                    <img src="/assets/discord.png" alt="Discord" width="35" class="toggle-invert mr-3">
+                    <h2 class="pr-5">@liemons</h2>
+                </div>
+
+                <a class="flex items-center pb-5" href="https://www.linkedin.com/in/nathan-gooneratne/" target="_blank"
+                    style="font-size:large">
+                    <img src="/assets/InBug-Black.png" alt="LinkedIn" width="35" class="toggle-invert mr-3">
+                    <h2 class="pr-5 hover:text-amber-500"><u>Nathan Gooneratne</u></h2>
+                </a>
+
+                <a class="flex items-center pb-5" href="https://itch.io/profile/skyloh" target="_blank"
+                    style="font-size:large">
+                    <img src="https://static.itch.io/images/itchio-textless-black.svg" alt="ItchIO" width="35"
+                        class="toggle-invert mr-3">
+                    <h2 class="pr-5 hover:text-amber-500"><u>skyloh</u></h2>
+                </a>
+            </div>
+
+            <!-- TEMPORARILY REMOVED
+            <div class="flex-1 max-w-md min-w-0 pr-5 pl-10">
+                <img src="assets/placeholder.png"
+                    class="hidden object-contain w-full h-auto [@media(min-width:1050px)]:block">
+            </div>
+            -->
+        </div>
+
+        <div style="height: 2rem"></div>
+
     </div>
 
     <script src="scripting.js"></script>
