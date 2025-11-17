@@ -1152,6 +1152,10 @@ input:checked + .toggle-bg {
   margin-right: 1.5rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -2095,6 +2099,10 @@ h3, a, p {
 }
 
 @media(min-width:1050px) {
+  .\[\@media\(min-width\:1050px\)\]\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .\[\@media\(min-width\:1050px\)\]\:block {
     display: block;
   }
